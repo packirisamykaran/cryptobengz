@@ -24,6 +24,9 @@ export default function Footer() {
                         <a href="">join the team!</a>
                     </div>
                 </div>
+                <div className="trademark">
+                    © 2022 CRYPTOBENGZ
+                </div>
             </div>
         </div>
     )
