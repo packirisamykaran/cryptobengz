@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 function App() {
     return (
-        <BrowserRouter basename="cbv2">
+        <BrowserRouter basename="/cbv2">
             <div className="app">
                 <Header />
                 <Routes>
