@@ -11,7 +11,7 @@ export default function Header() {
             </div>
             <div className="navbar">
                 <div className="linkContainer">
-                    <a href="#roadmap">roadmanp</a>
+                    <a href="#roadmap">roadmap</a>
                     <a href="#roadmap">about</a>
                 </div>
                 <div className="linkContainer">

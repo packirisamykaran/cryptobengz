@@ -8,14 +8,14 @@ export default function Footer() {
                 <div className="logoLinks">
                     <img src={mainLogo} alt="logo" className='logo' />
                     <div className="links">
-                        <a href=""> mint</a>
+                        <a href="">mint</a>
                         <a href="">about</a>
                         <a href="">the team</a>
                         <a href="">roadmap</a>
                         <a href="">merchant partners</a>
                     </div>
                     <div className="links">
-                        <a href=""> openser</a>
+                        <a href="">opensea</a>
                         <a href="">twitter</a>
                         <a href="">instagram</a>
                         <a href="">discord</a>
