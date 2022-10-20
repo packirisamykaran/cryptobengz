@@ -4,8 +4,10 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Footer from "./Footer";
 
 function App() {
+    // basename="/cbv2"
+    // "homepage": "https://packirisamykaran.github.io/cbv2",
     return (
-        <BrowserRouter basename="/cbv2">
+        <BrowserRouter>
             <div className="app">
                 <Header />
                 <Routes>
