@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+$yellow: #FFE97C;
+$purple1: #A16FE9;
+$purple2: #372553;
+$purple3: #1E1230;
+$pink: #FE1675;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Geo', sans-serif;
+
+}
+
+.app {
+    background: $purple3;
+
+    .logo {
+        background-color: $yellow;
+
+        img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+    }
+
+    // Navbar
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background: $purple2;
+        padding: 1rem;
+        column-gap: 10%;
+
+        .linkContainer {
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
+
+
+            a {
+                color: $purple1;
+                text-decoration: none;
+                text-transform: uppercase;
+
+
+
+            }
+
+            button {
+                padding: 0.2rem 0.8rem;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                text-transform: uppercase;
+
+            }
+        }
+
+        .linkContainer>* {
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+
+    }
+
+    // Navabr
+
+
+
+
+
+
+
+
+
+    // footer
+    .footer {
+        background: $yellow;
+        padding: 4rem 0;
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+
+            .logoLinks {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .logo {
+                    width: 150px;
+                    height: fit-content;
+                }
+
+                .links {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+                }
+
+                .links>* {
+                    color: $pink;
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+
+            .logoLinks>* {
+                width: fit-content;
+            }
+
+            .trademark {
+                color: $pink;
+                width: 100%;
+                text-align: center;
+                font-weight: 600;
+                margin-top: 3rem;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+        }
+    }
+
+
+    // footer
+}
+
+@media (max-width:700px) {
+
+    .app {
+
+        .logo {
+
+
+            img {}
+        }
+
+        // Navbar
+        .navbar {
+
+
+            .linkContainer {
+                column-gap: 1rem;
+
+                a {}
+
+                button {}
+            }
+
+            .linkContainer>* {
+                font-size: 1rem;
+            }
+
+
+        }
+
+        // Navabr
+
+        // Home
+        .home {
+            .mintSection {
+                .bg {
+
+                    padding: 2rem 0;
+
+                    .left,
+                    .right {
+                        margin: -1rem 0;
+                        width: 150px;
+
+
+                    }
+
+                }
+            }
+
+            .collection_LB {
+                .collection {
+                    .heading {}
+
+                    .nfts {}
+
+                    .nfts>* {}
+                }
+            }
+        }
+
+        // Home
+
+
+
+        // footer
+        .footer {
+
+            .container {
+
+
+                .logoLinks {
+                    flex-direction: column;
+                    row-gap: 3rem;
+
+
+
+                    .logo {}
+
+                    .links {}
+
+                    .links>* {}
+                }
+
+                .logoLinks>* {}
+
+            }
+        }
+
+
+        // footer
+
+    }
+}

@@ -1,0 +1,385 @@
+@import "./App.scss";
+
+// Home
+.home {
+
+    .mintSection {
+        position: relative;
+
+        .bg {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            // padding: 4rem 0;
+            position: absolute;
+            width: 100%;
+            height: inherit;
+
+
+
+            .left,
+            .right {
+                position: relative;
+                // display: flex;
+                // flex-direction: column;
+                width: fit-content;
+                width: 300px;
+                margin: -2rem 0;
+
+                img {}
+            }
+
+            .left {
+                transform: translateX(-50%);
+            }
+
+            .right {
+                left: 100%;
+                transform: translateX(-50%);
+            }
+
+
+            .bottom {
+                z-index: 2;
+            }
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+            width: fit-content;
+            // background: green;
+            margin: 0 auto;
+            width: 60%;
+            position: relative;
+            padding: 4rem 0;
+            max-width: 500px;
+
+            .sun {
+                position: absolute;
+                width: 80%;
+            }
+
+            .title {
+                width: 100%;
+            }
+
+            .game {
+                width: 50%;
+
+            }
+
+            .v {
+                width: 200px;
+            }
+
+            .gp {
+                width: 100%;
+                margin-top: 5%;
+                // background: green;
+
+
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+
+    .collection_LB {
+
+        padding: 2rem 0;
+        position: relative;
+
+        .bg {
+            font-size: 3rem;
+            color: $purple2;
+            position: absolute;
+            background: white;
+            width: 100%;
+            top: 50%;
+
+            .right,
+            .left {
+                width: 100%;
+                background-color: #B9ABDE;
+                text-align: center;
+            }
+
+            .right {
+                position: absolute;
+
+                left: 50%;
+                transform: translateX(-2rem);
+
+                .container {
+                    transform: rotateZ(90deg);
+                    background-color: aqua;
+
+                }
+            }
+
+            .left {
+                position: absolute;
+
+                left: -50%;
+                transform: translateY(50%);
+
+                .container {
+                    background-color: aqua;
+                    transform: rotateZ(-90deg);
+                }
+            }
+
+        }
+
+        .collection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 2rem;
+            margin-bottom: 4rem;
+
+            .heading {
+                color: white;
+                font-size: 4rem;
+            }
+
+            .nfts {
+                display: flex;
+                // padding: 0 4%;
+                column-gap: 4%;
+                justify-content: center;
+
+            }
+
+            .nfts>* {
+                width: 20%;
+            }
+
+        }
+
+
+        .LB {
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 2rem;
+            // background-color: #B9ABDE;
+
+
+            .heading {
+                color: white;
+                font-size: 3rem;
+            }
+
+            .legends {
+                padding: 0 2rem;
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 1rem;
+
+                .legend {
+                    width: 20%;
+                    // max-height: 200px;
+                }
+            }
+
+
+        }
+
+        p {
+            color: #B9ABDE;
+            max-width: 500px;
+            text-align: center;
+            width: 85%;
+            font-size: 1.5rem;
+        }
+
+
+    }
+
+    .loreLoot {
+        background: $yellow;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+
+
+
+
+        img {
+            width: 90%;
+
+        }
+
+
+
+        .nar2 {
+            align-self: flex-end;
+        }
+
+        .heading {
+            color: $purple2;
+            font-size: 3rem;
+
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+            display: flex;
+            align-items: center;
+
+            // background: green;
+            height: fit-content;
+            justify-content: center;
+
+            font-weight: 600;
+
+
+            span {
+                font-family: Roboto;
+                font-size: 6rem;
+                // background-color: #B9ABDE;
+                height: fit-content;
+            }
+        }
+
+        .perks {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            padding: 0 4%;
+            column-gap: 4%;
+
+
+
+
+            .perk {
+                width: 20%;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+// Home
+
+
+@media (max-width:700px) {
+
+    // Home
+    .home {
+        .mintSection {
+            .bg {
+
+                padding: 2rem 0;
+
+                .left,
+                .right {
+                    margin: -1rem 0;
+                    width: 150px;
+
+
+                }
+
+            }
+
+            .hero {
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .collection_LB {
+
+
+            .collection {
+
+
+
+                .heading {
+                    font-size: 2rem;
+                }
+
+                .nfts {}
+
+                .nfts>* {}
+
+
+
+            }
+
+            .LB {
+                .heading {
+                    font-size: 1.5rem;
+                }
+
+                .legends {
+                    padding: 0 0.5rem;
+                }
+
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+        }
+
+
+        .loreLoot {
+            padding: 2rem 0.2rem;
+
+            .heading {
+                p {
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    font-size: 3rem;
+                }
+            }
+
+
+            .perks {
+                padding: 0;
+                flex-wrap: wrap;
+                row-gap: 1rem;
+
+                .perk {
+                    width: 45%;
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    // Home
+
+}
