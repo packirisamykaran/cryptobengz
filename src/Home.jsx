@@ -6,7 +6,8 @@ import title from "./Assets/5 _CRYPTOBENGZ_ TITLE.png"
 import game from "./Assets/6 _ARE YOU GAME_.png";
 import v from "./Assets/7 _V_.png"
 import sun from "./Assets/2SUN.png";
-
+import cloud1btm from "./Assets/3 CLOUD1btm.png"
+import cloud2btm from "./Assets/4 CLOUD2btm.png"
 import gp from "./Assets/8 GACHAPON VIDEO.mp4";
 
 export default function Home() {
@@ -116,6 +117,13 @@ export default function Home() {
                         <p>MERCH DROPS AND MANY MORE!</p>
                     </div>
                 </div>
+                <img src={cloud2btm} alt="" className='cloud' />
+            </div>
+
+            <div className="roadmap">
+                <div className="bgclr"></div>
+                <img src={require("./Assets/Roadmap.png")} alt="" />
+                <img src={cloud1btm} alt="" className='cloud' />
             </div>
         </div>
     )

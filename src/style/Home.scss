@@ -275,9 +275,54 @@
                 }
             }
         }
+
+        .cloud {
+            width: 40%;
+            position: relative;
+            margin-top: 1rem;
+            left: -5%;
+
+
+        }
     }
 
 
+    .roadmap {
+        background-image: url("../Assets/Roadmapbg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        position: relative;
+
+        .bgclr {
+            background-color: $purple3;
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            opacity: 0.9;
+        }
+
+        img {
+            width: 95%;
+            padding: 5rem 0;
+            margin: 0 auto;
+            max-width: 700px;
+            z-index: 1;
+            // margin: 0 auto;
+        }
+
+        .cloud {
+            width: 40%;
+            position: relative;
+
+            background-color: #B9ABDE;
+
+        }
+    }
 
 }
 
@@ -348,7 +393,8 @@
 
 
         .loreLoot {
-            padding: 2rem 0.2rem;
+            padding: 0rem 0.2rem;
+            padding-top: 2rem;
 
             .heading {
                 p {

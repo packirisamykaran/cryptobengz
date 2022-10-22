@@ -317,6 +317,41 @@
   text-align: center;
   font-weight: 500;
 }
+.home .loreLoot .cloud {
+  width: 40%;
+  position: relative;
+  margin-top: 1rem;
+  left: -5%;
+}
+.home .roadmap {
+  background-image: url("../Assets/Roadmapbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.home .roadmap .bgclr {
+  background-color: #1E1230;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  opacity: 0.9;
+}
+.home .roadmap img {
+  width: 95%;
+  padding: 5rem 0;
+  margin: 0 auto;
+  max-width: 700px;
+  z-index: 1;
+}
+.home .roadmap .cloud {
+  width: 40%;
+  position: relative;
+  background-color: #B9ABDE;
+}
 
 @media (max-width: 700px) {
   .home .mintSection .bg {
@@ -343,7 +378,8 @@
     font-size: 1rem;
   }
   .home .loreLoot {
-    padding: 2rem 0.2rem;
+    padding: 0rem 0.2rem;
+    padding-top: 2rem;
   }
   .home .loreLoot .heading p {
     font-size: 1.5rem;
