@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <>
             <div className="logo">
-                <img src={mainLogo} alt="logo" />
+                <Link to="/"><img src={mainLogo} alt="logo" /></Link>
             </div>
             <div className="navbar">
                 <div className="linkContainer">
@@ -15,7 +15,9 @@ export default function Header() {
                     <a href="#roadmap">about</a>
                 </div>
                 <div className="linkContainer">
-                    <a href="#roadmap">MERCHANTS</a>
+                    <Link to={"/merchant"}>
+                        MERCHANTS
+                    </Link>
                     <button>mint</button>
                 </div>
             </div>
