@@ -128,9 +128,7 @@ export default function Home() {
                 <img className='map' src={require("./Assets/Roadmap.png")} alt="" />
                 <img src={cloud1btm} alt="" className='cloud' />
             </div>
-            <div className="team-heading">
 
-            </div>
             <div className="team">
                 <div className="heading">
                     THE TEAM

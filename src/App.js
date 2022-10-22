@@ -3,6 +3,7 @@ import Header from "./Header";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import Home from "./Home";
+import Join from "./Join";
 
 function App() {
     // basename="/cbv2"
@@ -12,7 +13,7 @@ function App() {
             <div className="app">
                 <Header />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Join />} />
                     <Route path="/about" element={<div>about</div>} />
                     <Route path="/faq" element={<div>faq</div>} />
                 </Routes>

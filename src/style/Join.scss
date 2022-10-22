@@ -1,0 +1,64 @@
+@import "./App.scss";
+
+.join {
+    background-color: $purple3;
+    color: $purple1;
+    font-size: 1.5rem;
+
+    // filter: ;    
+
+    .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+
+        .heading {
+            font-size: 5rem;
+            width: 100%;
+            color: $purple2;
+            text-align: center;
+            padding: 5rem 0;
+            color: $yellow;
+        }
+
+        .sub {
+            font-size: 2rem;
+            color: $purple1;
+            font-style: italic;
+
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            padding: 2rem 0;
+
+            ul {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .join {
+        .container {
+            .heading {
+                font-size: 3rem;
+                padding: 3rem 0;
+            }
+
+            .sub {
+                font-size: 1.5rem;
+            }
+
+            .section {
+                font-size: 1rem;
+            }
+        }
+    }
+}
