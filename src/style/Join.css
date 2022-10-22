@@ -127,6 +127,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding-bottom: 3rem;
 }
 .join .container .heading {
   font-size: 5rem;

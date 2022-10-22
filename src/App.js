@@ -13,8 +13,8 @@ function App() {
             <div className="app">
                 <Header />
                 <Routes>
-                    <Route path="/" element={<Join />} />
-                    <Route path="/about" element={<div>about</div>} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<Join />} />
                     <Route path="/faq" element={<div>faq</div>} />
                 </Routes>
                 <Footer />
