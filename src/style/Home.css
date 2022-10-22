@@ -318,7 +318,7 @@
   font-weight: 500;
 }
 .home .loreLoot .cloud {
-  width: 40%;
+  width: 35%;
   position: relative;
   margin-top: 1rem;
   left: -5%;
@@ -340,17 +340,88 @@
   height: 100%;
   opacity: 0.9;
 }
-.home .roadmap img {
+.home .roadmap .map {
   width: 95%;
-  padding: 5rem 0;
+  padding: 15% 0;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 900px;
   z-index: 1;
 }
 .home .roadmap .cloud {
-  width: 40%;
-  position: relative;
-  background-color: #B9ABDE;
+  width: 35%;
+  position: absolute;
+  padding: 0;
+  align-self: flex-end;
+  right: -5%;
+  bottom: 0;
+}
+.home .team {
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.home .team .heading {
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.home .team .members {
+  display: flex;
+}
+.home .team .members .member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  row-gap: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.home .team .members .member .diamond {
+  width: 25%;
+  margin-bottom: -1rem;
+}
+.home .team .members .member .memnft {
+  width: 100%;
+}
+.home .partners {
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.home .partners .heading {
+  width: 100%;
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+}
+.home .partners .logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  row-gap: 1rem;
+}
+.home .partners .logos img {
+  width: 15%;
+  max-width: 600px;
+}
+.home .partners p {
+  color: #FFE97C;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 700px;
+  text-align: center;
+  font-size: 3rem;
+}
+.home .partners p a {
+  color: #FFE97C;
 }
 
 @media (max-width: 700px) {
@@ -397,5 +468,24 @@
   }
   .home .loreLoot .perks .perk p {
     font-size: 1.2rem;
+  }
+  .home .team .heading {
+    font-size: 2rem;
+  }
+  .home .team .members .member {
+    font-size: 0.7rem;
+    row-gap: 0.5rem;
+  }
+  .home .team .members .member .diamond {
+    margin-bottom: 0;
+  }
+  .home .partners .heading {
+    font-size: 2rem;
+  }
+  .home .partners .logos img {
+    width: 30%;
+  }
+  .home .partners p {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=Home.css.map */

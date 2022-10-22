@@ -277,7 +277,7 @@
         }
 
         .cloud {
-            width: 40%;
+            width: 35%;
             position: relative;
             margin-top: 1rem;
             left: -5%;
@@ -306,22 +306,126 @@
             opacity: 0.9;
         }
 
-        img {
+        .map {
             width: 95%;
-            padding: 5rem 0;
+            padding: 15% 0;
             margin: 0 auto;
-            max-width: 700px;
+            max-width: 900px;
             z-index: 1;
-            // margin: 0 auto;
+            // padding-bottom: 2rem;
         }
 
         .cloud {
-            width: 40%;
-            position: relative;
+            width: 35%;
+            position: absolute;
 
-            background-color: #B9ABDE;
+            // margin: 0;
+            padding: 0;
+
+            align-self: flex-end;
+
+            right: -5%;
+            bottom: 0;
 
         }
+    }
+
+    .team {
+        padding: 6rem 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+
+        .heading {
+            font-size: 4rem;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .members {
+            display: flex;
+
+            .member {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 20%;
+                row-gap: 1rem;
+                text-align: center;
+                font-size: 1.5rem;
+
+                .diamond {
+                    width: 25%;
+                    margin-bottom: -1rem;
+                }
+
+                .memnft {
+                    width: 100%;
+
+                }
+
+
+
+
+            }
+        }
+
+
+
+    }
+
+    .partners {
+        padding-bottom: 6rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+
+
+        .heading {
+            width: 100%;
+            color: white;
+            font-size: 4rem;
+            text-align: center;
+
+
+        }
+
+
+
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
+
+            margin: 0 auto;
+
+            row-gap: 1rem;
+
+            img {
+                width: 15%;
+                max-width: 600px;
+
+            }
+        }
+
+        p {
+            color: $yellow;
+            font-size: 1rem;
+            margin: 0 auto;
+            width: 70%;
+            max-width: 700px;
+            text-align: center;
+            font-size: 3rem;
+
+            a {
+                color: $yellow;
+
+            }
+        }
+
     }
 
 }
@@ -421,7 +525,54 @@
                 }
             }
         }
+
+
+
+
+        .team {
+            .heading {
+                font-size: 2rem;
+
+            }
+
+            .members {
+                .member {
+                    font-size: 0.7rem;
+                    row-gap: 0.5rem;
+
+                    .diamond {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .partners {
+
+
+            .heading {
+                font-size: 2rem;
+            }
+
+            .logos {
+
+
+                img {
+                    width: 30%;
+                }
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+        }
+
+
+
     }
+
+
 
 
 

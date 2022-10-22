@@ -9,6 +9,7 @@ import sun from "./Assets/2SUN.png";
 import cloud1btm from "./Assets/3 CLOUD1btm.png"
 import cloud2btm from "./Assets/4 CLOUD2btm.png"
 import gp from "./Assets/8 GACHAPON VIDEO.mp4";
+import { Link } from 'react-router-dom'
 
 export default function Home() {
 
@@ -21,6 +22,8 @@ export default function Home() {
             video.pause();
         }
     }
+
+    const partnerLogos = ["52 WEN MOON LOGO.png", "53 NBCB LOGO.jpg", "54 BENGWHOCOOKS LOGO.jpg", "55 MIRAGE LOGO.png", "56 LOS AMIGOS LOGO.jpg", "57 SG PUBCRAWL LOGO.png"]
 
     return (
         <div className="home">
@@ -122,8 +125,60 @@ export default function Home() {
 
             <div className="roadmap">
                 <div className="bgclr"></div>
-                <img src={require("./Assets/Roadmap.png")} alt="" />
+                <img className='map' src={require("./Assets/Roadmap.png")} alt="" />
                 <img src={cloud1btm} alt="" className='cloud' />
+            </div>
+            <div className="team-heading">
+
+            </div>
+            <div className="team">
+                <div className="heading">
+                    THE TEAM
+                </div>
+                <div className="members">
+                    <div className="member" style={{ color: "#C0D157" }}>
+                        <img className='diamond' src={require("./Assets/42 GREEN GEM.png")} alt="" />
+                        <img className='memnft' src={require("./Assets/47 DENZEL.png")} alt="" />
+                        <div className="cb ">CRYPTOBROSKI</div>
+                        <div className="namerole">Denzel<br />Business Dev</div>
+                    </div>
+                    <div className="member" style={{ color: "#E88B3F" }}>
+                        <img className='diamond' src={require("./Assets/43 ORANGE GEM.png")} alt="" />
+                        <img className='memnft' src={require("./Assets/48 ROSE.png")} alt="" />
+                        <div className="cb">CRYPTOTHAMBI</div>
+                        <div className="namerole">Rose<br />Marketing, PR</div>
+                    </div>
+                    <div className="member" style={{ color: "#83DBD2" }}>
+                        <img className='diamond' src={require("./Assets/44 BLUE GEM.png")} alt="" />
+                        <img className='memnft' src={require("./Assets/49 FREYA.png")} alt="" />
+                        <div className="cb">CRYPTOCHAII</div>
+                        <div className="namerole">Freya<br />Artist, Creative Director</div>
+                    </div>
+                    <div className="member" style={{ color: "#FFD770" }}>
+                        <img className='diamond' src={require("./Assets/45 YELLOW GEM.png")} alt="" />
+                        <img className='memnft' src={require("./Assets/50 FERRIS.png")} alt="" />
+                        <div className="cb">CRYPTOHIADI</div>
+                        <div className="namerole">Ferris<br />Marketing, Finance</div>
+                    </div>
+                    <div className="member" style={{ color: "#D44848" }}>
+                        <img className='diamond' src={require("./Assets/46 RED GEM.png")} alt="" />
+                        <img className='memnft' src={require("./Assets/51 AVDHESH.png")} alt="" />
+                        <div className="cb">CRYPTOBHAU</div>
+                        <div className="namerole">Avdhesh<br />Developer</div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="partners">
+                <div className="heading">MERCHANT PARTNERS</div>
+                <div className="logos">
+                    {partnerLogos.map((img, index) => {
+                        return <img src={require(`./Assets/${img}`)} alt="logo" />
+                    })}
+                </div>
+                <p>
+                    ...AND MANY MORE! CLICK <Link to="/"><a>HERE</a></Link> TO SEE FULL LIST OF MERCHANT PARTNERS
+                </p>
             </div>
         </div>
     )
