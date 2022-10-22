@@ -1,0 +1,100 @@
+@import "./App.scss";
+
+.merchant {
+    .head {
+        font-size: 4rem;
+        color: $yellow;
+        width: 100%;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 0;
+        gap: 4rem;
+
+        .cat {
+            width: 95%;
+            // background: green;
+            float: right;
+
+            .heading {
+                font-size: 3rem;
+                color: #E88B3F;
+                width: 100%;
+                text-align: center;
+
+                margin-bottom: 2rem;
+            }
+
+            .items {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: stretch;
+                gap: 1rem;
+
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 1rem;
+
+                    .name {
+                        font-size: 2rem;
+                        color: $purple1;
+                        text-align: center;
+                    }
+
+
+
+                    img {
+                        // height: 150px;
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:700px) {
+
+    .merchant {
+
+        .head {
+            font-size: 3rem;
+            padding-inline: 1rem;
+        }
+
+        .categories {
+            .cat {
+                .heading {
+                    font-size: 2rem;
+                }
+
+                .items {
+                    row-gap: 2rem;
+
+                    .item {
+                        // background: green;
+
+                        img {
+                            width: 100px;
+
+                        }
+
+                        .name {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

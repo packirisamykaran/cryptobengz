@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import Home from "./Home";
 import Join from "./Join";
+import Merchant from "./Merchant";
 
 function App() {
     // basename="/cbv2"
@@ -15,7 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<Join />} />
-                    <Route path="/faq" element={<div>faq</div>} />
+                    <Route path="/faq" element={<Merchant />} />
                 </Routes>
                 <Footer />
             </div>
