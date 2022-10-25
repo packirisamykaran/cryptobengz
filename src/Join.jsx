@@ -38,7 +38,7 @@ export default function Join() {
                         WHAT YOU GET:
                         <ul>
                             <li>PERSONALISED PFP OF YOU</li>
-                            <li>AIRDROP OF 2 CRYPTOBENGZ V2 COLLECTION</li>
+                            <li>AIRDROP OF 2 CRYPTOBENGZ GEN Z COLLECTION</li>
                             <li>INVITES TO IRL EVENTS</li>
                             <li>AUTOMATIC GUESTLISTS AND PRIORITY FOR LAUNCHES AND MERCH</li>
                         </ul>
