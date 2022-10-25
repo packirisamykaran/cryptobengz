@@ -60,7 +60,7 @@ $pink: #FE1675;
 
 
         .active {
-            max-width: 5.5rem;
+            width: 5.5rem;
             overflow: hidden;
             background: $pink;
             border-radius: 5px;
@@ -71,6 +71,7 @@ $pink: #FE1675;
         }
 
         .btn {
+            width: 5.5rem;
             background-color: $purple1;
             padding: 0.2rem 0.2rem;
             border-radius: 5px;
@@ -171,6 +172,11 @@ $pink: #FE1675;
         // Navbar
         .navbar {
             padding: 0.5rem 0;
+
+            .active,
+            .btn {
+                width: 3.6rem;
+            }
         }
 
         .navbar>* {

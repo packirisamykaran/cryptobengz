@@ -42,7 +42,7 @@
   color: #372553;
 }
 .app .navbar .active {
-  max-width: 5.5rem;
+  width: 5.5rem;
   overflow: hidden;
   background: #FE1675;
   border-radius: 5px;
@@ -51,6 +51,7 @@
   text-transform: uppercase;
 }
 .app .navbar .btn {
+  width: 5.5rem;
   background-color: #A16FE9;
   padding: 0.2rem 0.2rem;
   border-radius: 5px;
@@ -113,6 +114,10 @@
 @media (max-width: 700px) {
   .app .navbar {
     padding: 0.5rem 0;
+  }
+  .app .navbar .active,
+.app .navbar .btn {
+    width: 3.6rem;
   }
   .app .navbar > * {
     font-size: 1rem;
