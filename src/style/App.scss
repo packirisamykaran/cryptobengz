@@ -58,15 +58,25 @@ $pink: #FE1675;
 
         }
 
-        button {
-            padding: 0.2rem 0.4rem;
-            outline: none;
-            border: none;
+
+        .active {
+            max-width: 5.5rem;
+            overflow: hidden;
+            background: $pink;
             border-radius: 5px;
+            padding: 0.2rem 0.2rem;
+            color: $purple2;
             text-transform: uppercase;
 
-
         }
+
+        .btn {
+            background-color: $purple1;
+            padding: 0.2rem 0.2rem;
+            border-radius: 5px;
+            color: #FFE97C;
+        }
+
 
 
 

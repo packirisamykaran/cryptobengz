@@ -41,12 +41,20 @@
   background-color: #A16FE9;
   color: #372553;
 }
-.app .navbar button {
-  padding: 0.2rem 0.4rem;
-  outline: none;
-  border: none;
+.app .navbar .active {
+  max-width: 5.5rem;
+  overflow: hidden;
+  background: #FE1675;
   border-radius: 5px;
+  padding: 0.2rem 0.2rem;
+  color: #372553;
   text-transform: uppercase;
+}
+.app .navbar .btn {
+  background-color: #A16FE9;
+  padding: 0.2rem 0.2rem;
+  border-radius: 5px;
+  color: #FFE97C;
 }
 .app .navbar > * {
   font-size: 1.5rem;

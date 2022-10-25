@@ -2,6 +2,7 @@ import React from 'react'
 import mainLogo from "./Assets/logoMain.png";
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import Wallet from './Wallet';
 
 
 export default function Header() {
@@ -26,7 +27,7 @@ export default function Header() {
                 <a href="#about">about</a>
                 <a href="#merchant">Merchant</a>
                 <a href="#join">Join us</a>
-                <button>Wallet</button>
+                <Wallet />
             </div>
         </>
     )
