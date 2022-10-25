@@ -89,6 +89,10 @@ $pink: #FE1675;
         cursor: pointer;
     }
 
+    .navbar>* :active {
+        scale: 0.8;
+    }
+
     // Navabr
 
 
