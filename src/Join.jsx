@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Join() {
     return (
-        <div className="join">
+        <div className="join" id="join">
             <div className="container">
                 <div className="heading">
                     JOIN THE CB TEAM

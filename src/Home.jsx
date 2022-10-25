@@ -10,8 +10,11 @@ import cloud1btm from "./Assets/3 CLOUD1btm.png"
 import cloud2btm from "./Assets/4 CLOUD2btm.png"
 import gp from "./Assets/8 GACHAPON VIDEO.mp4";
 import { Link } from 'react-router-dom'
+import Merchant from './Merchant'
+import Join from './Join'
 
 export default function Home() {
+
 
     const playGP = () => {
         const video = document.getElementById("gp");
@@ -63,7 +66,7 @@ export default function Home() {
             </div> */}
 
 
-            <div className="collection_LB">
+            <div className="collection_LB" >
                 {/* <div className="bg">
                     <div className="left"><div className="container">CRYPTOBENGZ V2 CRYPTOBENGZ V2</div></div>
                     <div className="right"><div className="container">CRYPTOBENGZ V2 CRYPTOBENGZ V2</div></div>
@@ -96,7 +99,7 @@ export default function Home() {
 
 
 
-            <div className="loreLoot">
+            <div className="loreLoot" id="about">
                 <div className="heading"><span>&#183;</span>  <p>CRYPTOBENGZ LORE</p> <span>&#183;</span> </div>
                 <img src={require("./Assets/Narrator.PNG")} alt="" className='nar1' />
                 <img src={require("./Assets/Narrator2.PNG")} alt="" className='nar2' />
@@ -123,13 +126,13 @@ export default function Home() {
                 <img src={cloud2btm} alt="" className='cloud' />
             </div>
 
-            <div className="roadmap">
+            <div className="roadmap" id="roadmap">
                 <div className="bgclr"></div>
                 <img className='map' src={require("./Assets/Roadmap.png")} alt="" />
                 <img src={cloud1btm} alt="" className='cloud' />
             </div>
 
-            <div className="team">
+            <div className="team" id="team">
                 <div className="heading">
                     THE TEAM
                 </div>
@@ -166,8 +169,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <Merchant />
+            <Join />
 
-            <div className="partners">
+            {/* <div className="partners">
                 <div className="heading">MERCHANT PARTNERS</div>
                 <div className="logos">
                     {partnerLogos.map((img, index) => {
@@ -175,9 +180,9 @@ export default function Home() {
                     })}
                 </div>
                 <p>
-                    ...AND MANY MORE! CLICK <Link to="/"><a>HERE</a></Link> TO SEE FULL LIST OF MERCHANT PARTNERS
+                    ...AND MANY MORE! CLICK <Link to="/merchant">HERE</Link> TO SEE FULL LIST OF MERCHANT PARTNERS
                 </p>
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -8,6 +8,7 @@
 
 .app {
   background: #1E1230;
+  position: relative;
 }
 .app .logo {
   background-color: #FFE97C;
@@ -20,32 +21,35 @@
 }
 .app .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   background: #372553;
-  padding: 1rem;
-  -moz-column-gap: 10%;
-       column-gap: 10%;
-}
-.app .navbar .linkContainer {
-  display: flex;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  padding: 3rem 0;
   align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
-.app .navbar .linkContainer a {
+.app .navbar a {
   color: #A16FE9;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 0.5rem 0.2rem;
+  border-radius: 10px;
 }
-.app .navbar .linkContainer button {
+.app .navbar a:hover {
+  background-color: #A16FE9;
+  color: #372553;
+}
+.app .navbar button {
   padding: 0.2rem 0.8rem;
   outline: none;
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
 }
-.app .navbar .linkContainer > * {
-  font-size: 1.3rem;
+.app .navbar > * {
+  font-size: 2rem;
   font-weight: 500;
   cursor: pointer;
 }
@@ -96,11 +100,7 @@
 }
 
 @media (max-width: 700px) {
-  .app .navbar .linkContainer {
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
-  }
-  .app .navbar .linkContainer > * {
+  .app .navbar > * {
     font-size: 1rem;
   }
   .app .home .mintSection .bg {
@@ -115,6 +115,9 @@
     flex-direction: column;
     row-gap: 3rem;
   }
+}
+.merchant {
+  background-color: #372553;
 }
 .merchant .head {
   font-size: 4rem;
@@ -157,11 +160,39 @@
 }
 .merchant .categories .cat .items .item .name {
   font-size: 2rem;
-  color: #A16FE9;
+  color: #FFE97C;
   text-align: center;
 }
 .merchant .categories .cat .items .item img {
   max-width: 200px;
+  border-radius: 10px;
+}
+.merchant h1 {
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  padding: 3rem 0;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  border-top: 2px solid #B9ABDE;
+}
+.merchant h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #B9ABDE;
+  max-width: 500px;
+  text-align: center;
+  padding-bottom: 3rem;
+  width: 90%;
+}
+.merchant h2 a {
+  color: #B9ABDE;
+  cursor: pointer;
 }
 
 @media (max-width: 700px) {
@@ -179,6 +210,12 @@
     width: 100px;
   }
   .merchant .categories .cat .items .item .name {
+    font-size: 1rem;
+  }
+  .merchant h1 {
+    font-size: 2rem;
+  }
+  .merchant h2 {
     font-size: 1rem;
   }
 }/*# sourceMappingURL=Merchant.css.map */

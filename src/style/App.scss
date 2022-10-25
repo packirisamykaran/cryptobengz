@@ -17,6 +17,7 @@ $pink: #FE1675;
 
 .app {
     background: $purple3;
+    position: relative;
 
     .logo {
         background-color: $yellow;
@@ -32,43 +33,50 @@ $pink: #FE1675;
     // Navbar
     .navbar {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         background: $purple2;
-        padding: 1rem;
-        column-gap: 10%;
+        padding: 3rem 0;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 2;
 
-        .linkContainer {
-            display: flex;
-            column-gap: 2rem;
-            align-items: center;
-
-
-            a {
-                color: $purple1;
-                text-decoration: none;
-                text-transform: uppercase;
-
+        a {
+            color: $purple1;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0.5rem 0.2rem;
+            border-radius: 10px;
 
 
-            }
 
-            button {
-                padding: 0.2rem 0.8rem;
-                outline: none;
-                border: none;
-                border-radius: 5px;
-                text-transform: uppercase;
-
-            }
         }
 
-        .linkContainer>* {
-            font-size: 1.3rem;
-            font-weight: 500;
-            cursor: pointer;
+        a:hover {
+            background-color: $purple1;
+            color: $purple2;
+
+        }
+
+        button {
+            padding: 0.2rem 0.5rem;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+
+
         }
 
 
+
+
+    }
+
+    .navbar>* {
+        font-size: 2rem;
+        font-weight: 500;
+        cursor: pointer;
     }
 
     // Navabr
@@ -147,22 +155,10 @@ $pink: #FE1675;
         }
 
         // Navbar
-        .navbar {
+        .navbar {}
 
-
-            .linkContainer {
-                column-gap: 1rem;
-
-                a {}
-
-                button {}
-            }
-
-            .linkContainer>* {
-                font-size: 1rem;
-            }
-
-
+        .navbar>* {
+            font-size: 1rem;
         }
 
         // Navabr

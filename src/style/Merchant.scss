@@ -1,6 +1,8 @@
 @import "./App.scss";
 
 .merchant {
+    background-color: $purple2;
+
     .head {
         font-size: 4rem;
         color: $yellow;
@@ -16,10 +18,13 @@
         padding: 4rem 0;
         gap: 4rem;
 
+
+
         .cat {
             width: 95%;
             // background: green;
             float: right;
+
 
             .heading {
                 font-size: 3rem;
@@ -46,7 +51,7 @@
 
                     .name {
                         font-size: 2rem;
-                        color: $purple1;
+                        color: $yellow;
                         text-align: center;
                     }
 
@@ -55,9 +60,46 @@
                     img {
                         // height: 150px;
                         max-width: 200px;
+                        border-radius: 10px;
                     }
                 }
             }
+        }
+    }
+
+
+
+
+
+    h1 {
+        width: 90%;
+        margin: 0 auto;
+        color: white;
+        padding: 3rem 0;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+
+        border-top: 2px solid #B9ABDE;
+
+    }
+
+    h2 {
+        width: fit-content;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #B9ABDE;
+        max-width: 500px;
+        text-align: center;
+        padding-bottom: 3rem;
+        width: 90%;
+
+
+        a {
+            color: #B9ABDE;
+            cursor: pointer;
+            ;
         }
     }
 }
@@ -87,6 +129,7 @@
                         img {
                             width: 100px;
 
+
                         }
 
                         .name {
@@ -95,6 +138,17 @@
                     }
                 }
             }
+        }
+
+        h1 {
+            font-size: 2rem;
+
+
+        }
+
+        h2 {
+            font-size: 1rem;
+
         }
     }
 }

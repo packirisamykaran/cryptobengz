@@ -61,11 +61,13 @@ export default function Merchant() {
     }
 
     return (
-        <div className="merchant">
+        <div className="merchant" id="merchant">
             <div className="head">MERCHANT PARTNERS LIST</div>
             <div className="categories">
                 {display}
             </div>
+            <h1>BECOME A MERCHANT <br />PARTNER TODAY!</h1>
+            <h2>Contact us at <a href="https://mail.google.com/mail/?view=cm&fs=1&to=karangoku12345@gmail.com">cryptobengs@gmail.com</a> and we will get back to you ASAP!</h2>
         </div>
     )
 }
