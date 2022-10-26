@@ -41,17 +41,29 @@
   background-color: #A16FE9;
   color: #372553;
 }
-.app .navbar button {
-  padding: 0.2rem 0.4rem;
-  outline: none;
-  border: none;
+.app .navbar .active {
+  width: 5.5rem;
+  overflow: hidden;
+  background: #FE1675;
   border-radius: 5px;
+  padding: 0.2rem 0.2rem;
+  color: #372553;
   text-transform: uppercase;
+}
+.app .navbar .btn {
+  width: 5.5rem;
+  background-color: #A16FE9;
+  padding: 0.2rem 0.2rem;
+  border-radius: 5px;
+  color: #FFE97C;
 }
 .app .navbar > * {
   font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
+}
+.app .navbar > * :active {
+  scale: 0.8;
 }
 .app .footer {
   background: #FFE97C;
@@ -102,6 +114,10 @@
 @media (max-width: 700px) {
   .app .navbar {
     padding: 0.5rem 0;
+  }
+  .app .navbar .active,
+.app .navbar .btn {
+    width: 3.6rem;
   }
   .app .navbar > * {
     font-size: 1rem;
@@ -180,6 +196,9 @@
 .home .mintSection .hero .gp {
   width: 100%;
   margin-top: 5%;
+}
+.home .mintSection .hero video::-webkit-media-controls {
+  display: none;
 }
 .home .mintSection .hero p {
   font-size: 1.5rem;
