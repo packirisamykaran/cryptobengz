@@ -184,6 +184,7 @@
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+  background: green;
 }
 .merchant .categories .cat .items .item img {
   max-width: 200px;
