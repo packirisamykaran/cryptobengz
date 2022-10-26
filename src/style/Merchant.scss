@@ -39,8 +39,9 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                align-items: stretch;
+                align-items: flex-start;
                 gap: 1rem;
+
 
                 .item {
                     display: flex;
@@ -49,10 +50,12 @@
                     justify-content: flex-end;
                     gap: 1rem;
 
+
                     .name {
                         font-size: 2rem;
                         color: $yellow;
                         text-align: center;
+                        max-width: fit-content;
                     }
 
 
