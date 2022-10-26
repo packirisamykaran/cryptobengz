@@ -12,19 +12,88 @@ import gp from "./Assets/8 GACHAPON VIDEO.mp4";
 import { Link } from 'react-router-dom'
 import Merchant from './Merchant'
 import Join from './Join'
+import { useState } from 'react'
 
 export default function Home() {
 
+    const [skipstyle, setskipstyle] = useState("hide");
+    const [mintstyle, setmintstyle] = useState("mint");
+    const [blankstyle, setblankstyle] = useState("hide");
+    const [collectstyle, setcollectstyle] = useState("hide");
+
+
+
+
+    function showSkipbtn() {
+        setskipstyle("skip")
+    }
+    function hideSkipbtn() {
+        setskipstyle("hide")
+    }
+
+    function showMintbtn() {
+        setmintstyle("mint")
+    }
+    function hideMintbtn() {
+        setmintstyle("hide")
+    }
+
+
+    function showBlank() {
+        setblankstyle("blank");
+    }
+    function hideBlank() {
+        setblankstyle("hide");
+    }
+
+    function showCollect() {
+        setcollectstyle("collect");
+    }
+
+    function hideCollect() {
+        setcollectstyle("hide");
+    }
+
+
+    function skiptoend() {
+        const video = document.getElementById("gp");
+        video.currentTime = video.duration;
+    }
 
     const playGP = () => {
         const video = document.getElementById("gp");
-        if (video.paused == true) {
-            video.play();
-        }
-        else {
-            video.pause();
-        }
+        // if (video.paused == true) {
+        //     video.play();
+        // }
+        // else {
+        //     video.pause();
+        // }
+        video.play();
+        hideMintbtn();
+        showSkipbtn();
     }
+
+
+    function onVidEnd() {
+        hideSkipbtn()
+        showCollect()
+        showBlank()
+
+
+    }
+
+    function onCollect() {
+        const video = document.getElementById("gp");
+        video.currentTime = 0;
+        showMintbtn()
+        hideBlank();
+        hideCollect();
+    }
+
+
+
+
+
 
     const partnerLogos = ["52 WEN MOON LOGO.png", "53 NBCB LOGO.jpg", "54 BENGWHOCOOKS LOGO.jpg", "55 MIRAGE LOGO.png", "56 LOS AMIGOS LOGO.jpg", "57 SG PUBCRAWL LOGO.png"]
 
@@ -49,9 +118,17 @@ export default function Home() {
                     <br />
                     <p>U in a not, cb kia?</p>
 
-                    <video id='gp' onClick={playGP} className='gp' >
-                        <source src={gp} type="video/mp4" />
-                    </video>
+                    <div className="video">
+                        <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
+                        <div className={collectstyle} onClick={onCollect}>Collect</div>
+                        <video id='gp' className='gp' onEnded={onVidEnd} controls={false}>
+                            <source src={gp} type="video/mp4" />
+                        </video>
+                        <div className={mintstyle} onClick={playGP}>mint now</div>
+                        <div className={skipstyle} onClick={skiptoend}>skip</div>
+
+                    </div>
+
                 </div>
             </div>
             {/* <div className="left">

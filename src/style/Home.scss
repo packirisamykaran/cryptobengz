@@ -76,21 +76,89 @@
                 width: 200px;
             }
 
-            .gp {
-                width: 100%;
-                margin-top: 5%;
-                // background: green;
-
-
-            }
-
-            video::-webkit-media-controls {
-                display: none;
-            }
-
             p {
                 font-size: 1.5rem;
             }
+
+            .video {
+                position: relative;
+
+                .gp {
+                    width: 100%;
+                    margin-top: 5%;
+                    // background: green;
+
+
+                }
+
+                video::-webkit-media-controls {
+                    display: none;
+                }
+
+
+
+                .hide {
+                    display: none;
+
+
+                }
+
+
+
+                .skip {
+                    display: block;
+                    font-size: 2rem;
+                    background: $yellow;
+                    color: $purple3;
+                    padding: 0.3rem 1rem;
+                    border-radius: 5px;
+                    width: fit-content;
+                    margin-inline: auto;
+
+                }
+
+                .mint {
+                    display: block;
+                    // position: absolute;
+                    text-transform: uppercase;
+                    font-size: 2rem;
+                    background: white;
+                    color: $purple3;
+                    padding: 0.3rem 1rem;
+                    border-radius: 100px;
+                    width: fit-content;
+                    margin-inline: auto;
+                    // left: 50%;
+                    // bottom: 0;
+                    // transform: translateX(-50%);
+                    font-weight: 600;
+                }
+
+
+                .blank {
+                    width: 75%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: absolute;
+                    top: 27%;
+                    border-radius: 30%;
+                }
+
+                .collect {
+                    display: block;
+                    font-size: 2rem;
+                    background: $yellow;
+                    color: $purple3;
+                    padding: 0.3rem 1rem;
+                    border-radius: 5px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 20%;
+                    transform: translateX(-50%);
+                }
+
+            }
+
         }
     }
 
@@ -465,6 +533,20 @@
             .hero {
                 p {
                     font-size: 1rem;
+                }
+
+
+                .video {
+
+                    .collect,
+                    .hide,
+                    .mint,
+                    .skip {
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                    }
+
+
                 }
             }
         }
