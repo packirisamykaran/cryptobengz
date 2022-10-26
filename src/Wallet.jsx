@@ -30,7 +30,7 @@ export default function Wallet() {
 
     return (
         <div className="wallet">
-            {active ? <div className='active' onClick={disconnect}>{account}</div> : <div onClick={connect} className="btn">Connect</div>}
+            {active ? <div className='active' onClick={disconnect}>{account.slice(0, 7)}</div> : <div onClick={connect} className="btn">Connect</div>}
         </div>
     )
 }
