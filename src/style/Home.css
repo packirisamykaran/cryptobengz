@@ -198,10 +198,11 @@
 }
 .home .mintSection .hero .video {
   position: relative;
+  width: 80%;
+  margin-top: 20%;
 }
 .home .mintSection .hero .video .gp {
   width: 100%;
-  margin-top: 5%;
 }
 .home .mintSection .hero .video video::-webkit-media-controls {
   display: none;

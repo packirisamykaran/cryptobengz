@@ -33,9 +33,9 @@ export default function Merchant() {
         }
     }
 
-    const merchsiteList = {
+    const merchLinks = {
         "F&B ESTABLISHMENTS": {
-            "NOTHING BUT CHEESE BURGER (NBCB)": "53 NBCB LOGO.jpg",
+            "NOTHING BUT CHEESE BURGER (NBCB)": "https://nbcb.com.sg/",
             "LOS AMIGOS": "56 LOS AMIGOS LOGO.jpg",
             "MIRAGE": "55 MIRAGE LOGO.png",
             "WEN MOON": "52 WEN MOON LOGO.png",
