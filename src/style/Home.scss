@@ -300,15 +300,25 @@
 
 
 
-        img {
+        .chatbox {
             width: 90%;
+            display: flex;
+            flex-direction: column;
 
-        }
+            max-width: 700px;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+
+            img {
+                width: 90%;
+
+            }
 
 
 
-        .nar2 {
-            align-self: flex-end;
+            .nar2 {
+                align-self: flex-end;
+            }
         }
 
         .heading {
@@ -352,6 +362,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                align-items: center;
                 // background: green;
 
                 img {
@@ -576,9 +587,9 @@
                     font-size: 2rem;
                 }
 
-                .nfts {}
+                // .nfts {}
 
-                .nfts>* {}
+                // .nfts>* {}
 
 
 
@@ -617,13 +628,21 @@
             }
 
 
+
+
             .perks {
                 padding: 0;
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
                 row-gap: 1rem;
+                flex-direction: column;
+                align-items: center;
 
                 .perk {
-                    width: 45%;
+                    width: 90%;
+
+                    img {
+                        width: 50%;
+                    }
 
                     p {
                         font-size: 1.2rem;

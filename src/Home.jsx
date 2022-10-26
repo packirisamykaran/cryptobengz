@@ -178,8 +178,10 @@ export default function Home() {
 
             <div className="loreLoot" id="about">
                 <div className="heading"><span>&#183;</span>  <p>CRYPTOBENGZ LORE</p> <span>&#183;</span> </div>
-                <img src={require("./Assets/Narrator.PNG")} alt="" className='nar1' />
-                <img src={require("./Assets/Narrator2.PNG")} alt="" className='nar2' />
+                <div className="chatbox">
+                    <img src={require("./Assets/Narrator.PNG")} alt="" className='nar1' />
+                    <img src={require("./Assets/Narrator2.PNG")} alt="" className='nar2' />
+                </div>
                 <div className="heading"><span>&#183;</span> <p>CB KIA’S UNLOCKABLE LOOT</p> <span>&#183;</span> </div>
 
                 <div className="perks">

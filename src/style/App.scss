@@ -35,7 +35,7 @@ $pink: #FE1675;
         display: flex;
         justify-content: space-around;
         background: $purple2;
-        padding: 1rem 0;
+        padding: 0.5rem 20%;
         align-items: center;
         position: sticky;
         top: 0;
@@ -60,8 +60,8 @@ $pink: #FE1675;
 
 
         .active {
-            width: 5.5rem;
-            overflow: hidden;
+
+
             background: $pink;
             border-radius: 5px;
             padding: 0.2rem 0.2rem;
@@ -71,7 +71,7 @@ $pink: #FE1675;
         }
 
         .btn {
-            width: 5.5rem;
+
             background-color: $purple1;
             padding: 0.2rem 0.2rem;
             border-radius: 5px;
@@ -85,7 +85,7 @@ $pink: #FE1675;
     }
 
     .navbar>* {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 500;
         cursor: pointer;
     }
@@ -163,20 +163,16 @@ $pink: #FE1675;
 
     .app {
 
-        .logo {
+        // .logo {
 
 
-            img {}
-        }
+        //     // img {}
+        // }
 
         // Navbar
         .navbar {
             padding: 0.5rem 0;
 
-            .active,
-            .btn {
-                width: 3.6rem;
-            }
         }
 
         .navbar>* {
@@ -203,15 +199,15 @@ $pink: #FE1675;
                 }
             }
 
-            .collection_LB {
-                .collection {
-                    .heading {}
+            // .collection_LB {
+            //     .collection {
+            //         .heading {}
 
-                    .nfts {}
+            //         .nfts {}
 
-                    .nfts>* {}
-                }
-            }
+            //         .nfts>* {}
+            //     }
+            // }
         }
 
         // Home
@@ -219,28 +215,28 @@ $pink: #FE1675;
 
 
         // footer
-        .footer {
+        // .footer {
 
-            .container {
-
-
-                .logoLinks {
-                    flex-direction: column;
-                    row-gap: 3rem;
+        //     .container {
 
 
+        //         .logoLinks {
+        //             flex-direction: column;
+        //             row-gap: 3rem;
 
-                    .logo {}
 
-                    .links {}
 
-                    .links>* {}
-                }
+        //             .logo {}
 
-                .logoLinks>* {}
+        //             .links {}
 
-            }
-        }
+        //             .links>* {}
+        //         }
+
+        //         .logoLinks>* {}
+
+        //     }
+        // }
 
 
         // footer

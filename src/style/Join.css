@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-around;
   background: #372553;
-  padding: 1rem 0;
+  padding: 0.5rem 20%;
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
@@ -41,17 +41,26 @@
   background-color: #A16FE9;
   color: #372553;
 }
-.app .navbar button {
-  padding: 0.2rem 0.4rem;
-  outline: none;
-  border: none;
+.app .navbar .active {
+  background: #FE1675;
   border-radius: 5px;
+  padding: 0.2rem 0.2rem;
+  color: #372553;
   text-transform: uppercase;
 }
+.app .navbar .btn {
+  background-color: #A16FE9;
+  padding: 0.2rem 0.2rem;
+  border-radius: 5px;
+  color: #FFE97C;
+}
 .app .navbar > * {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+}
+.app .navbar > * :active {
+  scale: 0.8;
 }
 .app .footer {
   background: #FFE97C;
@@ -113,10 +122,6 @@
 .app .home .mintSection .bg .right {
     margin: -1rem 0;
     width: 150px;
-  }
-  .app .footer .container .logoLinks {
-    flex-direction: column;
-    row-gap: 3rem;
   }
 }
 .join {
