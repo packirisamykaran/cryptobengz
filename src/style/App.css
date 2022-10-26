@@ -123,4 +123,8 @@
     margin: -1rem 0;
     width: 150px;
   }
+  .app .footer .container .logoLinks {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -215,28 +215,28 @@ $pink: #FE1675;
 
 
         // footer
-        // .footer {
+        .footer {
 
-        //     .container {
-
-
-        //         .logoLinks {
-        //             flex-direction: column;
-        //             row-gap: 3rem;
+            .container {
 
 
+                .logoLinks {
+                    flex-direction: column;
+                    row-gap: 3rem;
 
-        //             .logo {}
 
-        //             .links {}
 
-        //             .links>* {}
-        //         }
+                    // .logo {}
 
-        //         .logoLinks>* {}
+                    // .links {}
 
-        //     }
-        // }
+                    // .links>* {}
+                }
+
+                // .logoLinks>* {}
+
+            }
+        }
 
 
         // footer
