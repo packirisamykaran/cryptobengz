@@ -123,6 +123,10 @@
     margin: -1rem 0;
     width: 150px;
   }
+  .app .footer .container .logoLinks {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
 }
 .merchant {
   background-color: #372553;
@@ -165,6 +169,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 1rem;
+  text-decoration: none;
 }
 .merchant .categories .cat .items .item .name {
   font-size: 2rem;
