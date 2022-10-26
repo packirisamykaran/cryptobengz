@@ -96,6 +96,16 @@
                 }
 
 
+                .collect,
+                .hide,
+                .mint,
+                .skip {
+                    cursor: pointer;
+                    font-weight: 600;
+                }
+
+
+
 
                 .hide {
                     display: none;

@@ -206,6 +206,13 @@
 .home .mintSection .hero .video video::-webkit-media-controls {
   display: none;
 }
+.home .mintSection .hero .video .collect,
+.home .mintSection .hero .video .hide,
+.home .mintSection .hero .video .mint,
+.home .mintSection .hero .video .skip {
+  cursor: pointer;
+  font-weight: 600;
+}
 .home .mintSection .hero .video .hide {
   display: none;
 }
