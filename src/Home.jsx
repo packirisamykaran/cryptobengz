@@ -94,9 +94,16 @@ export default function Home() {
     useEffect(() => {
         const video = document.getElementById("gp");
         video.currentTime = 0.1;
-    })
+        console.log(video.currentTime)
+    }, [])
 
 
+    try {
+        const video = document.getElementById("gp");
+        console.log(video.currentTime)
+    } catch (error) {
+
+    }
     const partnerLogos = ["52 WEN MOON LOGO.png", "53 NBCB LOGO.jpg", "54 BENGWHOCOOKS LOGO.jpg", "55 MIRAGE LOGO.png", "56 LOS AMIGOS LOGO.jpg", "57 SG PUBCRAWL LOGO.png"]
 
     return (
