@@ -132,7 +132,7 @@
   background-color: #372553;
 }
 .merchant .head {
-  font-size: 4rem;
+  font-size: 2rem;
   color: #FFE97C;
   width: 100%;
   text-align: center;
@@ -144,13 +144,16 @@
   align-items: center;
   padding: 4rem 0;
   gap: 4rem;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 700px;
 }
 .merchant .categories .cat {
   width: 95%;
   float: right;
 }
 .merchant .categories .cat .heading {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: #E88B3F;
   width: 100%;
   text-align: center;
@@ -172,14 +175,14 @@
   text-decoration: none;
 }
 .merchant .categories .cat .items .item .name {
-  font-size: 2rem;
+  font-size: 1.1rem;
   color: #FFE97C;
   text-align: center;
   width: 100%;
-  max-width: 200px;
+  max-width: 100px;
 }
 .merchant .categories .cat .items .item img {
-  max-width: 200px;
+  max-width: 100px;
   border-radius: 10px;
 }
 .merchant h1 {
@@ -187,9 +190,10 @@
   margin: 0 auto;
   color: white;
   padding: 3rem 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
   text-align: center;
+  padding-bottom: 1rem;
   border-top: 2px solid #B9ABDE;
 }
 .merchant h2 {
@@ -198,7 +202,7 @@
   width: fit-content;
   margin: 0 auto;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #B9ABDE;
   max-width: 500px;
   text-align: center;
@@ -212,11 +216,11 @@
 
 @media (max-width: 700px) {
   .merchant .head {
-    font-size: 3rem;
+    font-size: 2rem;
     padding-inline: 1rem;
   }
   .merchant .categories .cat .heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .merchant .categories .cat .items {
     row-gap: 2rem;

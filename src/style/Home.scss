@@ -24,7 +24,7 @@
                 // flex-direction: column;
                 width: fit-content;
                 width: 300px;
-                margin: -2rem 0;
+                margin: -3rem 0;
 
                 img {}
             }
@@ -180,6 +180,10 @@
 
         padding: 2rem 0;
         position: relative;
+        // background: green;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
 
         .bg {
             font-size: 3rem;
@@ -232,7 +236,11 @@
 
             .heading {
                 color: white;
-                font-size: 4rem;
+                font-size: 2rem;
+            }
+
+            p {
+                // font-size: 1.5rem;
             }
 
             .nfts {
@@ -262,7 +270,7 @@
 
             .heading {
                 color: white;
-                font-size: 3rem;
+                font-size: 2rem;
             }
 
             .legends {
@@ -285,7 +293,7 @@
             max-width: 500px;
             text-align: center;
             width: 85%;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
 
@@ -323,7 +331,7 @@
 
         .heading {
             color: $purple2;
-            font-size: 3rem;
+            font-size: 2rem;
 
             width: 100%;
             font-weight: 600;
@@ -350,7 +358,7 @@
             display: flex;
             width: 100%;
             justify-content: center;
-            padding: 0 4%;
+            padding: 0 10%;
             column-gap: 4%;
 
 
@@ -410,9 +418,9 @@
 
         .map {
             width: 95%;
-            padding: 15% 0;
+            padding: 10% 0;
             margin: 0 auto;
-            max-width: 800px;
+            max-width: 500px;
             z-index: 1;
             // padding-bottom: 2rem;
         }
@@ -433,13 +441,14 @@
     }
 
     .team {
-        padding: 6rem 0;
+        padding: 6rem 5%;
         display: flex;
         flex-direction: column;
         row-gap: 3rem;
 
+
         .heading {
-            font-size: 4rem;
+            font-size: 3rem;
             width: 100%;
             text-align: center;
             color: white;
@@ -447,6 +456,7 @@
 
         .members {
             display: flex;
+            column-gap: 2rem;
 
             .member {
                 display: flex;
@@ -638,7 +648,7 @@
                 align-items: center;
 
                 .perk {
-                    width: 90%;
+                    width: 70%;
 
                     img {
                         width: 50%;
@@ -655,12 +665,16 @@
 
 
         .team {
+            padding: 2rem 0;
+
             .heading {
                 font-size: 2rem;
 
             }
 
             .members {
+                column-gap: 0;
+
                 .member {
                     font-size: 0.7rem;
                     row-gap: 0.5rem;

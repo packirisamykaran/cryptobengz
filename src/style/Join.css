@@ -123,22 +123,31 @@
     margin: -1rem 0;
     width: 150px;
   }
+  .app .footer .container .logoLinks {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
 }
 .join {
   background-color: #1E1230;
   color: #A16FE9;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+.join a {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #FFE97C;
 }
 .join .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 3rem;
 }
 .join .container .heading {
-  font-size: 5rem;
+  font-size: 2rem;
   width: 100%;
   color: #372553;
   text-align: center;
@@ -146,7 +155,7 @@
   color: #FFE97C;
 }
 .join .container .sub {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #A16FE9;
   font-style: italic;
 }
@@ -163,13 +172,13 @@
 
 @media (max-width: 700px) {
   .join .container .heading {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 3rem 0;
   }
   .join .container .sub {
     font-size: 1.5rem;
   }
   .join .container .section {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }/*# sourceMappingURL=Join.css.map */

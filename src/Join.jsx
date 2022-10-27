@@ -44,7 +44,7 @@ export default function Join() {
                         </ul>
                     </div>
                     <div>
-                        CONTACT US AT CRYPTOBENGS@GMAIL.COM, OR DM US ON ANY PLATFORM TO INFORM US OF YOUR INTEREST AND WE WILL GET BACK TO YOU ASAP.
+                        CONTACT US AT <a href="https://mail.google.com/mail/?view=cm&fs=1&to=karangoku12345@gmail.com">cryptobengs@gmail.com</a> OR DM US ON ANY PLATFORM TO INFORM US OF YOUR INTEREST AND WE WILL GET BACK TO YOU ASAP.
                     </div>
                 </div>
             </div>
