@@ -84,18 +84,18 @@ export default function Home() {
 
     function onCollect() {
         const video = document.getElementById("gp");
-        video.currentTime = 0.1;
+        video.currentTime = 0;
         showMintbtn()
         hideBlank();
         hideCollect();
     }
 
 
-    useEffect(() => {
-        const video = document.getElementById("gp");
-        video.currentTime = 0.1;
-        console.log(video.currentTime)
-    }, [])
+    // useEffect(() => {
+    //     const video = document.getElementById("gp");
+    //     video.currentTime = 0.1;
+    //     console.log(video.currentTime)
+    // }, [])
 
 
     try {
@@ -128,7 +128,7 @@ export default function Home() {
                     <p>U in a not, cb kia?</p>
 
                     <div className="video">
-                        <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
+                        <img className={blankstyle} src={require("./Assets/blank.png#t=0.001")} alt="" />
                         <div className={collectstyle} onClick={onCollect}>Collect</div>
                         <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp} type="video/mp4" />
