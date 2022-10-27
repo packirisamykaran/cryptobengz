@@ -121,7 +121,7 @@ export default function Home() {
                     <div className="video">
                         <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
                         <div className={collectstyle} onClick={onCollect}>Collect</div>
-                        <video id='gp' className='gp' onEnded={onVidEnd} controls={false} playsInline={true}>
+                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp} type="video/mp4" />
                         </video>
                         <div className={mintstyle} onClick={playGP}>mint now</div>
