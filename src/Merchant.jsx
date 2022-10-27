@@ -71,7 +71,6 @@ export default function Merchant() {
 
         for (let mer in merchList[cat]) {
 
-            console.log(merchLinks[cat][mer])
 
             mList.push(
                 <a href={merchLinks[cat][mer]} target="_blank" rel="noreferrer" className=" item">

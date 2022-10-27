@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./style/Home.css"
 import cloud1 from "./Assets/3 CLOUD1.png"
 import cloud2 from "./Assets/4 CLOUD2.png"
@@ -84,15 +84,17 @@ export default function Home() {
 
     function onCollect() {
         const video = document.getElementById("gp");
-        video.currentTime = 0;
+        video.currentTime = 0.1;
         showMintbtn()
         hideBlank();
         hideCollect();
     }
 
 
-
-
+    useEffect(() => {
+        const video = document.getElementById("gp");
+        video.currentTime = 0.1;
+    })
 
 
     const partnerLogos = ["52 WEN MOON LOGO.png", "53 NBCB LOGO.jpg", "54 BENGWHOCOOKS LOGO.jpg", "55 MIRAGE LOGO.png", "56 LOS AMIGOS LOGO.jpg", "57 SG PUBCRAWL LOGO.png"]
