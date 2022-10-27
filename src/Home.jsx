@@ -84,7 +84,7 @@ export default function Home() {
 
     function onCollect() {
         const video = document.getElementById("gp");
-        video.currentTime = 0.1;
+        video.currentTime = 0.3;
         showMintbtn()
         hideBlank();
         hideCollect();
@@ -128,10 +128,10 @@ export default function Home() {
                     <p>U in a not, cb kia?</p>
 
                     <div className="video">
-                        <img className={blankstyle} src={require("./Assets/blank.png#t=0.2")} alt="" />
+                        <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
                         <div className={collectstyle} onClick={onCollect}>Collect</div>
                         <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
-                            <source src={gp} type="video/mp4" />
+                            <source src={gp + "#t=0.3"} type="video/mp4" />
                         </video>
                         <div className={mintstyle} onClick={playGP}>mint now</div>
                         <div className={skipstyle} onClick={skiptoend}>skip</div>
