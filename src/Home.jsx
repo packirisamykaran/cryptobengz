@@ -204,7 +204,7 @@ export default function Home() {
                     </div>
                     <div className="perk">
                         <img src={require("./Assets/27 TICKET.png")} alt="" />
-                        <p>EXCLUSIVE PERKS, PROMOS AND ACCESS TO MANY MERCHANT PARTNERS</p>
+                        <p>EXCLUSIVE PERKS, PROMOS AND ACCESS TO MANY <br /> MERCHANT PARTNERS</p>
                     </div>
                     <div className="perk">
                         <img src={require("./Assets/28 KEY.png")} alt="" />
