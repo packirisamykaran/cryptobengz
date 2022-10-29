@@ -104,7 +104,7 @@ export default function Home() {
     } catch (error) {
 
     }
-    const partnerLogos = ["52 WEN MOON LOGO.png", "53 NBCB LOGO.jpg", "54 BENGWHOCOOKS LOGO.jpg", "55 MIRAGE LOGO.png", "56 LOS AMIGOS LOGO.jpg", "57 SG PUBCRAWL LOGO.png"]
+    // const partnerLogos = ["52 WEN MOON LOGO.png", "53 NBCB LOGO.jpg", "54 BENGWHOCOOKS LOGO.jpg", "55 MIRAGE LOGO.png", "56 LOS AMIGOS LOGO.jpg", "57 SG PUBCRAWL LOGO.png"]
 
     return (
         <div className="home">
@@ -225,36 +225,36 @@ export default function Home() {
                     THE TEAM
                 </div>
                 <div className="members">
-                    <div className="member" style={{ color: "#C0D157" }}>
+                    <a href='' className="member" target="_blank" rel="noreferrer" style={{ color: "#C0D157" }}>
                         <img className='diamond' src={require("./Assets/42 GREEN GEM.png")} alt="" />
                         <img className='memnft' src={require("./Assets/47 DENZEL.png")} alt="" />
                         <div className="cb ">CRYPTOBROSKI</div>
                         <div className="namerole">Denzel<br />Business Dev</div>
-                    </div>
-                    <div className="member" style={{ color: "#E88B3F" }}>
+                    </a>
+                    <a href='https://linktr.ee/roshaanth?utm_source=linktree_profile_share&ltsid=3f023b27-09cd-48af-b271-9040d605f202' className="member" target="_blank" rel="noreferrer" style={{ color: "#E88B3F" }}>
                         <img className='diamond' src={require("./Assets/43 ORANGE GEM.png")} alt="" />
                         <img className='memnft' src={require("./Assets/48 ROSE.png")} alt="" />
                         <div className="cb">CRYPTOTHAMBI</div>
                         <div className="namerole">Rose<br />Marketing, PR</div>
-                    </div>
-                    <div className="member" style={{ color: "#83DBD2" }}>
+                    </a>
+                    <a href='https://linktr.ee/freyatan' className="member" target="_blank" rel="noreferrer" style={{ color: "#83DBD2" }}>
                         <img className='diamond' src={require("./Assets/44 BLUE GEM.png")} alt="" />
                         <img className='memnft' src={require("./Assets/49 FREYA.png")} alt="" />
                         <div className="cb">CRYPTOCHAII</div>
                         <div className="namerole">Freya<br />Artist, Creative Director</div>
-                    </div>
-                    <div className="member" style={{ color: "#FFD770" }}>
+                    </a>
+                    <a href='https://linktr.ee/Ferrisffrancis' className="member" target="_blank" rel="noreferrer" style={{ color: "#FFD770" }}>
                         <img className='diamond' src={require("./Assets/45 YELLOW GEM.png")} alt="" />
                         <img className='memnft' src={require("./Assets/50 FERRIS.png")} alt="" />
                         <div className="cb">CRYPTOHIADI</div>
                         <div className="namerole">Ferris<br />Marketing, Finance</div>
-                    </div>
-                    <div className="member" style={{ color: "#D44848" }}>
+                    </a>
+                    <a href='' className="member" target="_blank" rel="noreferrer" style={{ color: "#D44848" }}>
                         <img className='diamond' src={require("./Assets/46 RED GEM.png")} alt="" />
                         <img className='memnft' src={require("./Assets/51 AVDHESH.png")} alt="" />
                         <div className="cb">CRYPTOBHAU</div>
                         <div className="namerole">Avdhesh<br />Developer</div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <Merchant />
