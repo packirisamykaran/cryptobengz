@@ -134,7 +134,7 @@ export default function Home() {
                             <source src={gp + "#t=0.3"} type="video/mp4" />
                         </video>
                         <div className={mintstyle} onClick={playGP}>mint now</div>
-                        <div className={skipstyle} onClick={skiptoend}>skip</div>
+                        <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
 
@@ -167,7 +167,11 @@ export default function Home() {
                         <img src={require("./Assets/11 PIC3.jpg")} alt="" />
                         <img src={require("./Assets/12 PIC4.png")} alt="" />
                     </div>
-                    <p>A - ??? [error error] - supply of generative CryptoBengz Is here! Representing our little red dot, the CryptoBengz collection boasts a variety of Singaporean traits and backgrounds. The utility based NFT allows holders early access to launches, exclusive events to IRL events, discounts at all our partner merchants, and many more! </p>
+                    <p>
+                        A - ??? [error error] - supply of generative CryptoBengz Is here! Representing our little red dot. Cryptobengz GEN Z is the Grand Collection by Team Cryptobengz of this local brand. Our collection includes utility-enabled collectIbles that depict a variety of local Singaporean culture-inspired traits as seen through the team's eyes. Members of the Cryptobengz Genesis, Cryptobengz GEN Z and Cryptokakis will have access to exclusive airdrops, merchandise drops, merchant partnerships, and community events.
+                        <br /><br />
+                        A home to call your own. Where you can relive your Ahbeng lifestyle through us again and again.
+                    </p>
                 </div>
 
                 <div className="LB">
@@ -200,7 +204,7 @@ export default function Home() {
                     </div>
                     <div className="perk">
                         <img src={require("./Assets/27 TICKET.png")} alt="" />
-                        <p>DISCOUNTS FROM MANY PARTNER MERCHANTS</p>
+                        <p>EXCLUSIVE PERKS, PROMOS AND ACCESS TO MANY MERCHANT PARTNERS</p>
                     </div>
                     <div className="perk">
                         <img src={require("./Assets/28 KEY.png")} alt="" />
