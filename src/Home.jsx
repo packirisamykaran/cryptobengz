@@ -229,7 +229,7 @@ export default function Home() {
                     THE TEAM
                 </div>
                 <div className="members">
-                    <a href='' className="member" target="_blank" rel="noreferrer" style={{ color: "#C0D157" }}>
+                    <a href='https://twitter.com/CryptoBroski3' className="member" target="_blank" rel="noreferrer" style={{ color: "#C0D157" }}>
                         <img className='diamond' src={require("./Assets/42 GREEN GEM.png")} alt="" />
                         <img className='memnft' src={require("./Assets/47 DENZEL.png")} alt="" />
                         <div className="cb ">CRYPTOBROSKI</div>

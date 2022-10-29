@@ -25,7 +25,7 @@ export default function Header() {
             <div className="navbar">
                 <a href="#roadmap">Roadmap</a>
                 <a href="#about">about</a>
-                <a href="#merchant">Merchant</a>
+                <a href="#merchant">Merchants</a>
                 <a href="#join">Join us</a>
                 <Wallet />
             </div>
