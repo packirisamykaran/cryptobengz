@@ -133,7 +133,7 @@ export default function Home() {
                         <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.3"} type="video/mp4" />
                         </video>
-                        <div className={mintstyle} onClick={playGP}>mint now</div>
+                        {/* <div className={mintstyle} onClick={playGP}>mint now</div> */}
                         <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
