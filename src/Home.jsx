@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom'
 import Merchant from './Merchant'
 import Join from './Join'
 import { useState } from 'react'
+import premint from "./Assets/premint.png"
 
 export default function Home() {
 
@@ -139,10 +140,14 @@ export default function Home() {
                     <img src={game} alt="" className="game" />
                     <img src={v} alt="" className="v" />
                     <img src={v} alt="" className="v" />
+
                     <p>Pixel by pixel, we celebrate everything Singaporean. The CryptoBengz collection is an NFT project that forever holds the beauty of the Lion City's diverse personalities on the blockchain.</p>
                     <br />
                     <p>U in a not, cb kia?</p>
 
+                    <a href="https://www.premint.xyz/cryptobengz-gen-z/">
+                        <img src={premint} alt="" className="premint" />
+                    </a>
                     <div className="video">
                         <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
                         <div className={collectstyle} onClick={onCollect}>Collect</div>

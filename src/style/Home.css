@@ -186,16 +186,23 @@
 .home .mintSection .hero .v {
   width: 200px;
 }
+.home .mintSection .hero .premint {
+  width: 100%;
+  z-index: 3;
+  margin-top: 20%;
+  max-width: 300px;
+  margin-bottom: -15%;
+}
 .home .mintSection .hero p {
   font-size: 1.5rem;
 }
 .home .mintSection .hero .video {
   position: relative;
   width: 60%;
-  margin-top: 20%;
 }
 .home .mintSection .hero .video .gp {
   width: 100%;
+  z-index: 2;
 }
 .home .mintSection .hero .video video::-webkit-media-controls {
   display: none;
@@ -269,7 +276,7 @@
   position: absolute;
 }
 .home .collection_LB .sidetext img {
-  width: 15%;
+  width: 35%;
 }
 .home .collection_LB .bg {
   font-size: 3rem;
