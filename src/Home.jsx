@@ -276,7 +276,7 @@ export default function Home() {
                         <div className="cb">CRYPTOHIADI</div>
                         <div className="namerole">Ferris<br />Marketing, Finance</div>
                     </a>
-                    <a href='' className="member" target="_blank" rel="noreferrer" style={{ color: "#D44848" }}>
+                    <a href='https://linktr.ee/avdheshcharjan' className="member" target="_blank" rel="noreferrer" style={{ color: "#D44848" }}>
                         <img className='diamond' src={require("./Assets/46 RED GEM.png")} alt="" />
                         <img className='memnft' src={require("./Assets/51 AVDHESH.png")} alt="" />
                         <div className="cb">CRYPTOBHAU</div>
