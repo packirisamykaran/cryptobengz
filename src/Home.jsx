@@ -3,12 +3,12 @@ import "./style/Home.css"
 import cloud1 from "./Assets/3 CLOUD1.png"
 import cloud2 from "./Assets/4 CLOUD2.png"
 import title from "./Assets/5 _CRYPTOBENGZ_ TITLE.png"
-import game from "./Assets/6 _ARE YOU GAME_.png";
+import game from "./Assets/huat.PNG";
 import v from "./Assets/7 _V_.png"
 import sun from "./Assets/2SUN.png";
 import cloud1btm from "./Assets/3 CLOUD1btm.png"
 import cloud2btm from "./Assets/4 CLOUD2btm.png"
-import gp from "./Assets/8 GACHAPON VIDEO.mp4";
+import gp from "./Assets/locked.MP4";
 import { Link } from 'react-router-dom'
 import Merchant from './Merchant'
 import Join from './Join'
@@ -62,15 +62,26 @@ export default function Home() {
 
     const playGP = () => {
         const video = document.getElementById("gp");
+
+        video.play();
+        hideMintbtn();
+        showSkipbtn();
+
+
+    }
+
+
+    const playlocked = () => {
+        const video = document.getElementById("gp");
+        video.play();
+
+
         // if (video.paused == true) {
         //     video.play();
         // }
         // else {
         //     video.pause();
         // }
-        video.play();
-        hideMintbtn();
-        showSkipbtn();
     }
 
 
@@ -80,6 +91,11 @@ export default function Home() {
         showBlank()
 
 
+    }
+
+    function onlockend() {
+        const video = document.getElementById("gp");
+        video.currentTime = 0;
     }
 
     function onCollect() {
@@ -130,11 +146,14 @@ export default function Home() {
                     <div className="video">
                         <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
                         <div className={collectstyle} onClick={onCollect}>Collect</div>
-                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
+                        {/* <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.3"} type="video/mp4" />
-                        </video>
+                        </video> */}
                         {/* <div className={mintstyle} onClick={playGP}>mint now</div> */}
-                        <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
+                        <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
+                            <source src={gp} type="video/mp4" />
+                        </video>
+                        <div className={skipstyle} on Click={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
 
@@ -153,6 +172,10 @@ export default function Home() {
 
 
             <div className="collection_LB" >
+                {/* <div className="sidetext">
+                    <img src={require("./Assets/sidetextleft.PNG")} alt="" />
+                    <img src={require("./Assets/sidetextright.PNG")} alt="" />
+                </div> */}
                 {/* <div className="bg">
                     <div className="left"><div className="container">CRYPTOBENGZ V2 CRYPTOBENGZ V2</div></div>
                     <div className="right"><div className="container">CRYPTOBENGZ V2 CRYPTOBENGZ V2</div></div>

@@ -7,7 +7,7 @@
 }
 
 .app {
-  background: #1E1230;
+  background: #211232;
   position: relative;
 }
 .app .logo {
@@ -214,7 +214,7 @@
 .home .mintSection .hero .video .skip {
   display: block;
   background: #FFE97C;
-  color: #1E1230;
+  color: #211232;
   padding: 0.3rem 1rem;
   border-radius: 5px;
   width: -webkit-fit-content;
@@ -226,7 +226,7 @@
   display: block;
   text-transform: uppercase;
   background: #FE1675;
-  color: #1E1230;
+  color: #211232;
   padding: 0.3rem 1rem;
   border-radius: 100px;
   width: -webkit-fit-content;
@@ -260,6 +260,16 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+}
+.home .collection_LB .sidetext {
+  display: flex;
+  width: 100%;
+  z-index: 1;
+  justify-content: space-between;
+  position: absolute;
+}
+.home .collection_LB .sidetext img {
+  width: 15%;
 }
 .home .collection_LB .bg {
   font-size: 3rem;
@@ -299,6 +309,7 @@
   align-items: center;
   row-gap: 2rem;
   margin-bottom: 4rem;
+  z-index: 2;
 }
 .home .collection_LB .collection .heading {
   color: white;
@@ -312,6 +323,7 @@
 }
 .home .collection_LB .collection .nfts > * {
   width: 20%;
+  z-index: 2;
 }
 .home .collection_LB .LB {
   color: white;
@@ -320,6 +332,7 @@
   flex-direction: column;
   align-items: center;
   row-gap: 2rem;
+  z-index: 2;
 }
 .home .collection_LB .LB .heading {
   color: white;
@@ -333,6 +346,7 @@
 }
 .home .collection_LB .LB .legends .legend {
   width: 20%;
+  z-index: 2;
 }
 .home .collection_LB p {
   color: #B9ABDE;
@@ -424,7 +438,7 @@
   overflow: hidden;
 }
 .home .roadmap .bgclr {
-  background-color: #1E1230;
+  background-color: #211232;
   width: 100%;
   position: absolute;
   height: 100%;

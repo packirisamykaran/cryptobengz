@@ -6,6 +6,8 @@
     .mintSection {
         position: relative;
 
+
+
         .bg {
             display: flex;
             flex-direction: column;
@@ -185,6 +187,19 @@
         max-width: 800px;
         margin: 0 auto;
 
+        .sidetext {
+            display: flex;
+            width: 100%;
+            // background: green;
+            z-index: 1;
+            justify-content: space-between;
+            position: absolute;
+
+            img {
+                width: 15%;
+            }
+        }
+
         .bg {
             font-size: 3rem;
             color: $purple2;
@@ -233,6 +248,7 @@
             align-items: center;
             row-gap: 2rem;
             margin-bottom: 4rem;
+            z-index: 2;
 
             .heading {
                 color: white;
@@ -253,6 +269,7 @@
 
             .nfts>* {
                 width: 20%;
+                z-index: 2;
             }
 
         }
@@ -265,6 +282,7 @@
             flex-direction: column;
             align-items: center;
             row-gap: 2rem;
+            z-index: 2;
             // background-color: #B9ABDE;
 
 
@@ -281,6 +299,7 @@
 
                 .legend {
                     width: 20%;
+                    z-index: 2;
                     // max-height: 200px;
                 }
             }
