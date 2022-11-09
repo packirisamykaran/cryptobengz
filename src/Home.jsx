@@ -24,15 +24,15 @@ export default function Home() {
     // 3) contract object once connected
     // 4) transaction
     // Ethereum integration
-    const web3 = new Web3(Web3.givenProvider);
+    // const web3 = new Web3(Web3.givenProvider);
 
 
-    const contractapi = web3.eth.Contract;
+    // const contractapi = web3.eth.Contract;
 
 
-    let standardContract = new contractapi(abi, "address")
+    // let standardContract = new contractapi(abi, "address")
 
-    // Ethereum Integration
+    // // Ethereum Integration
 
 
 
