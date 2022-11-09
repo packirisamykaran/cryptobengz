@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "./style/Home.css"
 import cloud1 from "./Assets/3 CLOUD1.png"
 import cloud2 from "./Assets/4 CLOUD2.png"
@@ -9,13 +9,33 @@ import sun from "./Assets/2SUN.png";
 import cloud1btm from "./Assets/3 CLOUD1btm.png"
 import cloud2btm from "./Assets/4 CLOUD2btm.png"
 import gp from "./Assets/locked.MP4";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Merchant from './Merchant'
 import Join from './Join'
 import { useState } from 'react'
 import premint from "./Assets/premint.png"
+import Web3 from 'web3'
+import abi from "./contractABI.json"
+
 
 export default function Home() {
+    // 1) provider
+    // 2) signer
+    // 3) contract object once connected
+    // 4) transaction
+    // Ethereum integration
+    const web3 = new Web3(Web3.givenProvider);
+
+
+    const contractapi = web3.eth.Contract;
+
+
+    let standardContract = new contractapi(abi, "address")
+
+    // Ethereum Integration
+
+
+
 
     const [skipstyle, setskipstyle] = useState("hide");
     const [mintstyle, setmintstyle] = useState("mint");

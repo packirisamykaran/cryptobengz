@@ -18,7 +18,7 @@ export default function Footer() {
                     </div>
                     <div className="links">
                         <a href="https://opensea.io/collection/cryptobengz">opensea</a>
-                        <a href="https://twitter.com/cryptobengs?lang=en">twitter</a>
+                        <a href="https://twitter.com/cryptobengz">twitter</a>
                         <a href="https://www.instagram.com/cryptobengz/?hl=en">instagram</a>
                         <a href="https://discord.gg/n6EXBeAjby">discord</a>
                     </div>
