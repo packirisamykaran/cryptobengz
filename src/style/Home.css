@@ -330,7 +330,7 @@
 }
 .home .collection_LB .collection .nfts > * {
   width: 20%;
-  z-index: 2;
+  z-index: 1;
 }
 .home .collection_LB .LB {
   color: white;
@@ -353,7 +353,7 @@
 }
 .home .collection_LB .LB .legends .legend {
   width: 20%;
-  z-index: 2;
+  z-index: 1;
 }
 .home .collection_LB p {
   color: #B9ABDE;
