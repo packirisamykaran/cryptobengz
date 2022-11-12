@@ -17,6 +17,7 @@ import premint from "./Assets/premint.png"
 import Web3 from 'web3'
 import abi from "./contractABI.json"
 import { Signer } from 'ethers'
+import gplock from "./Assets/locked.MP4"
 
 
 
@@ -198,13 +199,13 @@ export default function Home({ provider }) {
                     <div className="video">
                         <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
                         <div className={collectstyle} onClick={onCollect}>Collect</div>
-                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
+                        {/* <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.1"} type="video/mp4" />
                         </video>
-                        <div className={mintstyle} onClick={Mint}>mint now</div>
-                        {/* <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
-                            <source src={gp} type="video/mp4" />
-                        </video> */}
+                        <div className={mintstyle} onClick={Mint}>mint now</div> */}
+                        <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
+                            <source src={gplock} type="video/mp4" />
+                        </video>
                         <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
