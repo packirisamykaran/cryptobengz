@@ -6,9 +6,11 @@ import { useWeb3React } from "@web3-react/core"
 export const injected = new InjectedConnector({
     supportedChainIds: [1, 3, 4, 5, 42],
 })
-export default function Wallet() {
+export default function Wallet({ provider }) {
 
     const { active, account, library, connector, activate, deactivate } = useWeb3React()
+    const web3react = useWeb3React()
+
 
     async function connect() {
         try {
@@ -26,6 +28,8 @@ export default function Wallet() {
         }
 
     }
+
+
 
 
     return (

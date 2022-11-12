@@ -8,7 +8,7 @@ import v from "./Assets/7 _V_.png"
 import sun from "./Assets/2SUN.png";
 import cloud1btm from "./Assets/3 CLOUD1btm.png"
 import cloud2btm from "./Assets/4 CLOUD2btm.png"
-import gp from "./Assets/locked.MP4";
+import gp from "./Assets/gpcom.mp4";
 // import { Link } from 'react-router-dom'
 import Merchant from './Merchant'
 import Join from './Join'
@@ -16,24 +16,48 @@ import { useState } from 'react'
 import premint from "./Assets/premint.png"
 import Web3 from 'web3'
 import abi from "./contractABI.json"
+import { Signer } from 'ethers'
 
 
-export default function Home() {
-    // 1) provider
-    // 2) signer
-    // 3) contract object once connected
-    // 4) transaction
-    // Ethereum integration
-    // const web3 = new Web3(Web3.givenProvider);
+
+export default function Home({ provider }) {
 
 
-    // const contractapi = web3.eth.Contract;
 
 
-    // let standardContract = new contractapi(abi, "address")
 
-    // // Ethereum Integration
 
+    async function Mint() {
+        try {
+            // 1) provider
+
+            await provider.send("eth_requestAccounts", []);
+            const signer = provider.getSigner();
+            console.log(await signer.getAddress());
+            // console.log(active)
+            // // 2) signer
+
+            let balance = await Signer.get
+
+            // console.log(await provider.getBlockNumber())
+
+            // 3) contract object once connected
+            // 4) transaction
+            // Ethereum integration
+            // const web3 = new Web3(Web3.givenProvider);
+
+
+            // const contractapi = web3.eth.Contract;
+
+
+            // let standardContract = new contractapi(abi, "address")
+
+            // // Ethereum Integration
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
 
 
@@ -84,6 +108,7 @@ export default function Home() {
     const playGP = () => {
         const video = document.getElementById("gp");
 
+
         video.play();
         hideMintbtn();
         showSkipbtn();
@@ -92,9 +117,11 @@ export default function Home() {
     }
 
 
-    const playlocked = () => {
+    const playlocked = async () => {
         const video = document.getElementById("gp");
         video.play();
+
+
 
 
         // if (video.paused == true) {
@@ -137,7 +164,7 @@ export default function Home() {
 
     try {
         const video = document.getElementById("gp");
-        console.log(video.currentTime)
+        // console.log(video.currentTime)
     } catch (error) {
 
     }
@@ -171,14 +198,14 @@ export default function Home() {
                     <div className="video">
                         <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
                         <div className={collectstyle} onClick={onCollect}>Collect</div>
-                        {/* <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
-                            <source src={gp + "#t=0.3"} type="video/mp4" />
-                        </video> */}
-                        {/* <div className={mintstyle} onClick={playGP}>mint now</div> */}
-                        <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
-                            <source src={gp} type="video/mp4" />
+                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
+                            <source src={gp + "#t=0.1"} type="video/mp4" />
                         </video>
-                        <div className={skipstyle} on Click={skiptoend}>SKIP ANIMATION</div>
+                        <div className={mintstyle} onClick={Mint}>mint now</div>
+                        {/* <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
+                            <source src={gp} type="video/mp4" />
+                        </video> */}
+                        <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
 
