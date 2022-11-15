@@ -200,6 +200,30 @@
   position: relative;
   width: 60%;
 }
+.home .mintSection .hero .video .counter {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 1rem;
+  justify-content: space-evenly;
+}
+.home .mintSection .hero .video .counter .value {
+  font-size: 2rem;
+}
+.home .mintSection .hero .video .counter button {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #FFE97C;
+  background: #A16FE9;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.home .mintSection .hero .video .counter button:active {
+  transform: rotateZ(180deg);
+}
 .home .mintSection .hero .video .gp {
   width: 100%;
   z-index: 2;
@@ -241,6 +265,12 @@
   width: fit-content;
   margin-inline: auto;
   font-weight: 600;
+  margin-top: 1rem;
+}
+.home .mintSection .hero .video .mint:active {
+  scale: 0.9;
+  background: #A16FE9;
+  color: white;
 }
 .home .mintSection .hero .video .blank {
   width: 75%;
@@ -559,6 +589,14 @@
 .home .mintSection .hero .video .skip {
     font-size: 0.9rem;
     font-weight: 600;
+  }
+  .home .mintSection .hero .video .counter .value {
+    font-size: 1.5rem;
+  }
+  .home .mintSection .hero .video .counter button {
+    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
   }
   .home .collection_LB .collection .heading {
     font-size: 2rem;

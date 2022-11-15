@@ -8,7 +8,6 @@ import Merchant from "./Merchant";
 import ScrollToTop from "./ScrollToTop";
 import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
-import { ethers } from "ethers";
 
 function App() {
     // basename="/cbv2"
@@ -20,19 +19,14 @@ function App() {
         return new Web3(provider);
     }
 
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-
     return (
         <Web3ReactProvider getLibrary={getLibrary}>
             <BrowserRouter>
                 <ScrollToTop />
                 <div className="app">
-                    <Header provider={provider} />
+                    <Header />
                     <Routes>
-                        <Route
-                            path="/"
-                            element={<Home provider={provider} />}
-                        />
+                        <Route path="/" element={<Home />} />
                         <Route path="/join" element={<Join />} />
                         <Route path="/merchant" element={<Merchant />} />
                     </Routes>
