@@ -43,8 +43,8 @@ export default function Header({ provider }) {
                 <Link to="/"><img src={mainLogo} alt="logo" /></Link>
             </div>
             <div className="navbar">
-                <a href="#roadmap">Roadmap</a>
                 <a href="#about">about</a>
+                <a href="#roadmap">Roadmap</a>
                 <a href="#merchant">Merchants</a>
                 <a href="#join">Join us</a>
                 {/* <div className="wallet">
