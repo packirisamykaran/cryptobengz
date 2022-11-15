@@ -16,47 +16,67 @@ import { useState } from 'react'
 import premint from "./Assets/premint.png"
 import Web3 from 'web3'
 import abi from "./contractABI.json"
-import { Signer } from 'ethers'
-import gplock from "./Assets/locked.MP4"
+import { ethers, Signer } from 'ethers'
+import gplock from "./Assets/locked.MP4";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 
-export default function Home({ provider }) {
+export default function Home() {
+
+
+    // Pricing
+    const b1p = 0.03;
+    const b2p = 0.1;
+    const b3p = 0.045;
 
 
 
+
+
+
+    // Toast notification
+    const mintSuccess = () => toast.success("Minted successfully")
+
+    const mintFailed = () => toast.error("Mint Failed")
+
+
+    const batch2Error = () => toast.error("Mint in multiples of 2");
 
 
 
     async function Mint() {
         try {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
             // 1) provider
-
+            const scAddress = "0xe21F63991E965ae499bb227B11d383597BeE4Fe9";
             await provider.send("eth_requestAccounts", []);
-            const signer = provider.getSigner();
-            console.log(await signer.getAddress());
-            // console.log(active)
+
+
+
             // // 2) signer
+            const signer = provider.getSigner();
 
-            let balance = await Signer.get
-
-            // console.log(await provider.getBlockNumber())
+            const address = signer.getAddress();
 
             // 3) contract object once connected
+            const contract = new ethers.Contract(scAddress, abi, signer);
+
             // 4) transaction
-            // Ethereum integration
-            // const web3 = new Web3(Web3.givenProvider);
+            const mintTransaction = await contract.mintBatch1(quantity, { value: ethers.utils.parseEther((quantity * 0.03).toString()) })
+            mintSuccess();
+        } catch (e) {
+            // if (e.value) {
+            //     toast.error(e.value)
+            // }
+            if (e.error) {
+                toast.error(e.error.message)
+            }
+            // if (e.message) {
+            //     toast.error(e.message)
+            // }
+            mintFailed()
 
-
-            // const contractapi = web3.eth.Contract;
-
-
-            // let standardContract = new contractapi(abi, "address")
-
-            // // Ethereum Integration
-
-        } catch (error) {
-            console.log(error)
         }
     }
 
@@ -68,6 +88,20 @@ export default function Home({ provider }) {
     const [collectstyle, setcollectstyle] = useState("hide");
 
 
+    const [quantity, setquantity] = useState(0);
+
+
+    function increment() {
+        setquantity(quantity + 1);
+    }
+    function decrement() {
+
+        if (quantity > 0) {
+            setquantity(quantity - 1);
+        }
+    }
+
+
 
 
     function showSkipbtn() {
@@ -77,6 +111,8 @@ export default function Home({ provider }) {
         setskipstyle("hide")
     }
 
+
+
     function showMintbtn() {
         setmintstyle("mint")
     }
@@ -85,12 +121,15 @@ export default function Home({ provider }) {
     }
 
 
+
     function showBlank() {
         setblankstyle("blank");
     }
     function hideBlank() {
         setblankstyle("hide");
     }
+
+
 
     function showCollect() {
         setcollectstyle("collect");
@@ -101,6 +140,8 @@ export default function Home({ provider }) {
     }
 
 
+
+
     function skiptoend() {
         const video = document.getElementById("gp");
         video.currentTime = video.duration;
@@ -108,29 +149,15 @@ export default function Home({ provider }) {
 
     const playGP = () => {
         const video = document.getElementById("gp");
-
-
         video.play();
         hideMintbtn();
         showSkipbtn();
-
-
     }
 
 
     const playlocked = async () => {
         const video = document.getElementById("gp");
         video.play();
-
-
-
-
-        // if (video.paused == true) {
-        //     video.play();
-        // }
-        // else {
-        //     video.pause();
-        // }
     }
 
 
@@ -156,23 +183,21 @@ export default function Home({ provider }) {
     }
 
 
-    // useEffect(() => {
-    //     const video = document.getElementById("gp");
-    //     video.currentTime = 0.1;
-    //     console.log(video.currentTime)
-    // }, [])
+
 
 
     try {
         const video = document.getElementById("gp");
-        // console.log(video.currentTime)
     } catch (error) {
 
     }
-    // const partnerLogos = ["52 WEN MOON LOGO.png", "53 NBCB LOGO.jpg", "54 BENGWHOCOOKS LOGO.jpg", "55 MIRAGE LOGO.png", "56 LOS AMIGOS LOGO.jpg", "57 SG PUBCRAWL LOGO.png"]
 
     return (
         <div className="home">
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
             <div className="mintSection">
                 <div className="bg">
                     <img src={cloud2} alt="" className='right' />
@@ -193,16 +218,21 @@ export default function Home({ provider }) {
                     <br />
                     <p>U in a not, cb kia?</p>
 
-                    <a href="https://www.premint.xyz/cryptobengz-gen-z/">
+                    {/* <a href="https://www.premint.xyz/cryptobengz-gen-z/">
                         <img src={premint} alt="" className="premint" />
-                    </a>
+                    </a> */}
                     <div className="video">
-                        <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
+                        {/* <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
                         <div className={collectstyle} onClick={onCollect}>Collect</div>
-                        {/* <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
+                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.1"} type="video/mp4" />
                         </video>
-                        <div className={mintstyle} onClick={Mint}>mint now</div> */}
+                        <div className={mintstyle} onClick={Mint}>mint now</div>
+                        <div className="counter">
+                            <button onClick={decrement}>-</button>
+                            <div className="value">{quantity}</div>
+                            <button onClick={increment}>+</button>
+                        </div> */}
                         <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
                             <source src={gplock} type="video/mp4" />
                         </video>
@@ -212,27 +242,11 @@ export default function Home({ provider }) {
 
                 </div>
             </div>
-            {/* <div className="left">
-                <img src={cloud1} alt="" />
-                <img src={cloud2} alt="" />
-                <img src={cloud1} alt="" />
-            </div>
-            <div className="right">
-                <img src={cloud2} alt="" />
-                <img src={cloud1} alt="" />
-                <img src={cloud2} alt="" />
-            </div> */}
+
 
 
             <div className="collection_LB" >
-                {/* <div className="sidetext">
-                    <img src={require("./Assets/sidetextleft.PNG")} alt="" />
-                    <img src={require("./Assets/sidetextright.PNG")} alt="" />
-                </div> */}
-                {/* <div className="bg">
-                    <div className="left"><div className="container">CRYPTOBENGZ V2 CRYPTOBENGZ V2</div></div>
-                    <div className="right"><div className="container">CRYPTOBENGZ V2 CRYPTOBENGZ V2</div></div>
-                </div> */}
+
                 <div className="collection">
                     <div className="heading">
                         THE COLLECTION
@@ -339,18 +353,6 @@ export default function Home({ provider }) {
             </div>
             <Merchant />
             <Join />
-
-            {/* <div className="partners">
-                <div className="heading">MERCHANT PARTNERS</div>
-                <div className="logos">
-                    {partnerLogos.map((img, index) => {
-                        return <img src={require(`./Assets/${img}`)} alt="logo" />
-                    })}
-                </div>
-                <p>
-                    ...AND MANY MORE! CLICK <Link to="/merchant">HERE</Link> TO SEE FULL LIST OF MERCHANT PARTNERS
-                </p>
-            </div> */}
         </div>
     )
 }
