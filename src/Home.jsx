@@ -44,7 +44,7 @@ export default function Home() {
 
     const [walletMinted, setWalletMinted] = useState();
 
-    const [mintBatch, setMintBatch] = useState();
+    const [mintBatch, setMintBatch] = useState(1);
 
     const [userAddress, setUserAddress] = useState();
 
@@ -71,7 +71,7 @@ export default function Home() {
             const scAddress = "0x790F503Eb1C3F03D747B2C9321d759A81374876c";
             await provider.send("eth_requestAccounts", []);
 
-
+            console.log(provider)
 
             // // 2) signer
             const signer = provider.getSigner();
@@ -94,10 +94,10 @@ export default function Home() {
 
 
 
-            const curMintbatch = await contract.currentMintBatch();
-            console.log(curMintbatch)
+            // const curMintbatch = await contract.currentMintBatch();
+            // console.log(curMintbatch)
 
-            setMintBatch(curMintbatch.toNumber());
+            // setMintBatch(curMintbatch.toNumber());
 
 
             setContract(contract);
