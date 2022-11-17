@@ -12,13 +12,14 @@ import gp from "./Assets/gpcom.mp4";
 // import { Link } from 'react-router-dom'
 import Merchant from './Merchant'
 import Join from './Join'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import premint from "./Assets/premint.png"
 import Web3 from 'web3'
 import abi from "./contractABI.json"
 import { ethers, Signer } from 'ethers'
 import gplock from "./Assets/locked.MP4";
 import toast, { Toaster } from 'react-hot-toast';
+import whiteList from "./Assets/cb_whitelist.json"
 
 
 
@@ -30,6 +31,15 @@ export default function Home() {
     const b2p = 0.1;
     const b3p = 0.045;
 
+
+    // provider
+    const [contract, setContract] = useState()
+
+    const [nftsminted, setNftsminted] = useState();
+
+    const [walletMinted, setWalletMinted] = useState();
+
+    const [mintBatch, setMintBatch] = useState();
 
 
 
@@ -43,28 +53,66 @@ export default function Home() {
 
     const batch2Error = () => toast.error("Mint in multiples of 2");
 
+    // useEffect(() => {
+
+    //     const getcontract = async () => {
+    //         const provider = new ethers.providers.Web3Provider(window.ethereum);
+    //         // 1) provider
+    //         // const scAddress = "0xeB47c5b0D7981b8ee89CBfCb1160C5487A9a2B3e";
+    //         const scAddress = "0xe21F63991E965ae499bb227B11d383597BeE4Fe9";
+    //         await provider.send("eth_requestAccounts", []);
+
+
+
+    //         // // 2) signer
+    //         const signer = provider.getSigner();
+
+    //         const address = signer.getAddress();
+
+    //         // 3) contract object once connected
+    //         const contract = new ethers.Contract(scAddress, abi, signer);
+
+
+    //         const supply = await contract.totalSupply();
+    //         setNftsminted(supply.toNumber());
+
+    //         const minted = await contract.balanceOf(address);
+
+    //         setWalletMinted(minted.toNumber())
+
+
+    //         setContract(contract);
+    //     }
+
+    //     try {
+    //         getcontract();
+
+    //     } catch (error) {
+
+    //     }
+
+
+    // }, [])
+
+
 
 
     async function Mint() {
         try {
-            const provider = new ethers.providers.Web3Provider(window.ethereum);
-            // 1) provider
-            const scAddress = "0xe21F63991E965ae499bb227B11d383597BeE4Fe9";
-            await provider.send("eth_requestAccounts", []);
 
-
-
-            // // 2) signer
-            const signer = provider.getSigner();
-
-            const address = signer.getAddress();
-
-            // 3) contract object once connected
-            const contract = new ethers.Contract(scAddress, abi, signer);
 
             // 4) transaction
-            const mintTransaction = await contract.mintBatch1(quantity, { value: ethers.utils.parseEther((quantity * 0.03).toString()) })
+            const mintTransaction = await contract.mintBatch3(quantity, { value: ethers.utils.parseEther((quantity * 0.045).toString()) })
             mintSuccess();
+
+            const supply = await contract.totalSupply();
+            setNftsminted(supply.toNumber());
+            if (mintTransaction) {
+                playGP()
+            }
+
+
+
         } catch (e) {
             // if (e.value) {
             //     toast.error(e.value)
@@ -86,7 +134,7 @@ export default function Home() {
     const [mintstyle, setmintstyle] = useState("mint");
     const [blankstyle, setblankstyle] = useState("hide");
     const [collectstyle, setcollectstyle] = useState("hide");
-
+    const [counterStyle, setCounterStyle] = useState("counter")
 
     const [quantity, setquantity] = useState(0);
 
@@ -102,6 +150,15 @@ export default function Home() {
     }
 
 
+
+
+    function showCounter() {
+        setCounterStyle("counter");
+    }
+
+    function hideCounter() {
+        setCounterStyle("hide")
+    }
 
 
     function showSkipbtn() {
@@ -152,6 +209,7 @@ export default function Home() {
         video.play();
         hideMintbtn();
         showSkipbtn();
+        hideCounter()
     }
 
 
@@ -180,6 +238,8 @@ export default function Home() {
         showMintbtn()
         hideBlank();
         hideCollect();
+        showCounter();
+        setquantity(0)
     }
 
 
@@ -222,13 +282,19 @@ export default function Home() {
                         <img src={premint} alt="" className="premint" />
                     </a> */}
                     <div className="video">
-                        {/* <img className={blankstyle} src={require("./Assets/blank.png")} alt="" />
-                        <div className={collectstyle} onClick={onCollect}>Collect</div>
-                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
+                        <img className={blankstyle} src={require("./Assets/blank.gif")} alt="" />
+                        <div className={collectstyle} >
+                            <h3 onClick={onCollect}>Collect</h3>
+
+                            <div className="message">
+                                Some Message, you have minted you th NFT
+                            </div>
+                        </div>
+                        {/* <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.1"} type="video/mp4" />
                         </video>
                         <div className={mintstyle} onClick={Mint}>mint now</div>
-                        <div className="counter">
+                        <div className={counterStyle}>
                             <button onClick={decrement}>-</button>
                             <div className="value">{quantity}</div>
                             <button onClick={increment}>+</button>
@@ -239,8 +305,12 @@ export default function Home() {
                         <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
-
+                    {/* <div className="minted">
+                        <div className="total">Total minted: {nftsminted}/???? minted</div>
+                        <div className="user">You have minted: {walletMinted}</div>
+                    </div> */}
                 </div>
+
             </div>
 
 
@@ -310,7 +380,7 @@ export default function Home() {
 
             <div className="roadmap" id="roadmap">
                 <div className="bgclr"></div>
-                <img className='map' src={require("./Assets/Roadmap.png")} alt="" />
+                <img className='map' src={require("./Assets/roadmap.png")} alt="" />
                 <img src={cloud1btm} alt="" className='cloud' />
             </div>
 
