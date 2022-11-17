@@ -446,7 +446,7 @@ export default function Home() {
 
             <div className="roadmap" id="roadmap">
                 <div className="bgclr"></div>
-                <img className='map' src={require("./Assets/roadmap.png")} alt="" />
+                <img className='map' src={require("./Assets/Roadmap.png")} alt="" />
                 <img src={cloud1btm} alt="" className='cloud' />
             </div>
 
