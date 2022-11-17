@@ -120,9 +120,10 @@ export default function Home() {
         try {
 
             let mintTransaction;
+            // console.log(whiteList.list.includes(userAddress))
 
             if (mintBatch === 1) {
-                if (whiteList.list.includes(userAddress)) {
+                if (true) {
                     mintTransaction = await contract.mintBatch1(quantity, { value: ethers.utils.parseEther((quantity * 0.03).toString()) })
                     mintSuccess();
                 } else {
