@@ -20,6 +20,11 @@ import { ethers, Signer } from 'ethers'
 import gplock from "./Assets/locked.MP4";
 import toast, { Toaster } from 'react-hot-toast';
 import whiteList from "./Assets/cb_whitelist.json"
+import random1 from "./Assets/random1.PNG"
+import random2 from "./Assets/random2.PNG"
+import random3 from "./Assets/random3.PNG"
+import scroll from "./Assets/scroll.png"
+import scrollCross from "./Assets/scrollCross.PNG"
 
 
 
@@ -41,6 +46,9 @@ export default function Home() {
 
     const [mintBatch, setMintBatch] = useState();
 
+    const [userAddress, setUserAddress] = useState();
+
+
 
 
 
@@ -49,50 +57,60 @@ export default function Home() {
     const mintSuccess = () => toast.success("Minted successfully")
 
     const mintFailed = () => toast.error("Mint Failed")
+    const notWhiteListed = () => toast.error("You are not guestlisted");
 
 
     const batch2Error = () => toast.error("Mint in multiples of 2");
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     const getcontract = async () => {
-    //         const provider = new ethers.providers.Web3Provider(window.ethereum);
-    //         // 1) provider
-    //         // const scAddress = "0xeB47c5b0D7981b8ee89CBfCb1160C5487A9a2B3e";
-    //         const scAddress = "0xe21F63991E965ae499bb227B11d383597BeE4Fe9";
-    //         await provider.send("eth_requestAccounts", []);
-
-
-
-    //         // // 2) signer
-    //         const signer = provider.getSigner();
-
-    //         const address = signer.getAddress();
-
-    //         // 3) contract object once connected
-    //         const contract = new ethers.Contract(scAddress, abi, signer);
+        const getcontract = async () => {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            // 1) provider
+            // const scAddress = "0xeB47c5b0D7981b8ee89CBfCb1160C5487A9a2B3e";
+            const scAddress = "0x790F503Eb1C3F03D747B2C9321d759A81374876c";
+            await provider.send("eth_requestAccounts", []);
 
 
-    //         const supply = await contract.totalSupply();
-    //         setNftsminted(supply.toNumber());
 
-    //         const minted = await contract.balanceOf(address);
+            // // 2) signer
+            const signer = provider.getSigner();
 
-    //         setWalletMinted(minted.toNumber())
+            const address = await signer.getAddress();
 
-
-    //         setContract(contract);
-    //     }
-
-    //     try {
-    //         getcontract();
-
-    //     } catch (error) {
-
-    //     }
+            setUserAddress(address);
 
 
-    // }, [])
+            // 3) contract object once connected
+            const contract = new ethers.Contract(scAddress, abi, signer);
+
+
+            const supply = await contract.totalSupply();
+            setNftsminted(supply.toNumber());
+
+            const minted = await contract.balanceOf(address);
+
+            setWalletMinted(minted.toNumber())
+
+
+            const curMintbatch = await contract.currentMintBatch();
+
+
+            setMintBatch(curMintbatch.toNumber());
+
+
+            setContract(contract);
+        }
+
+        try {
+            getcontract();
+
+        } catch (error) {
+
+        }
+
+
+    }, [])
 
 
 
@@ -100,13 +118,30 @@ export default function Home() {
     async function Mint() {
         try {
 
+            let mintTransaction;
 
+            if (mintBatch === 1) {
+                if (whiteList.list.includes(userAddress)) {
+                    mintTransaction = await contract.mintBatch1(quantity, { value: ethers.utils.parseEther((quantity * 0.03).toString()) })
+                } else {
+                    notWhiteListed()
+                }
+
+            }
+            else if (mintBatch === 2) {
+                mintTransaction = await contract.mintBatch2(quantity, { value: ethers.utils.parseEther(((quantity * 0.1) / 2).toString()) })
+            }
+
+            else if (mintBatch === 3) {
+                mintTransaction = await contract.mintBatch3(quantity, { value: ethers.utils.parseEther((quantity * 0.045).toString()) })
+            }
             // 4) transaction
-            const mintTransaction = await contract.mintBatch3(quantity, { value: ethers.utils.parseEther((quantity * 0.045).toString()) })
+
             mintSuccess();
 
             const supply = await contract.totalSupply();
             setNftsminted(supply.toNumber());
+            setWalletMinted(walletMinted + quantity);
             if (mintTransaction) {
                 playGP()
             }
@@ -135,6 +170,8 @@ export default function Home() {
     const [blankstyle, setblankstyle] = useState("hide");
     const [collectstyle, setcollectstyle] = useState("hide");
     const [counterStyle, setCounterStyle] = useState("counter")
+    const [scrollStyle, setScrollStyle] = useState("hide");
+
 
     const [quantity, setquantity] = useState(0);
 
@@ -150,6 +187,15 @@ export default function Home() {
     }
 
 
+
+    function showScroll() {
+        setScrollStyle("scroll");
+    }
+
+    function hideScroll() {
+        setScrollStyle("hide")
+        console.log("hide")
+    }
 
 
     function showCounter() {
@@ -223,6 +269,7 @@ export default function Home() {
         hideSkipbtn()
         showCollect()
         showBlank()
+        showScroll();
 
 
     }
@@ -258,6 +305,23 @@ export default function Home() {
                 position="top-center"
                 reverseOrder={false}
             />
+
+            <div className={scrollStyle}>
+
+
+                <div className="container">
+                    <img src={scrollCross} onClick={hideScroll} alt="" className="cross" />
+                    <div className="congrates">CONGRATULATIONS</div>
+                    <div className="received">You have minted {walletMinted} CBs</div>
+                    <div className="welcome">
+                        Welcome to the Cryptobengz family, a place to call home.<br /> Stay Real, Stay Huat!
+                    </div>
+                    <a href="">
+                        View on OpenSea
+                    </a>
+                </div>
+                <img src={scroll} alt="" className='bg' />
+            </div>
             <div className="mintSection">
                 <div className="bg">
                     <img src={cloud2} alt="" className='right' />
@@ -282,6 +346,7 @@ export default function Home() {
                         <img src={premint} alt="" className="premint" />
                     </a> */}
                     <div className="video">
+
                         <img className={blankstyle} src={require("./Assets/blank.gif")} alt="" />
                         <div className={collectstyle} >
                             <h3 onClick={onCollect}>Collect</h3>
@@ -290,25 +355,26 @@ export default function Home() {
                                 Some Message, you have minted you th NFT
                             </div>
                         </div>
-                        {/* <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
+                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.1"} type="video/mp4" />
                         </video>
-                        <div className={mintstyle} onClick={Mint}>mint now</div>
+
                         <div className={counterStyle}>
                             <button onClick={decrement}>-</button>
                             <div className="value">{quantity}</div>
                             <button onClick={increment}>+</button>
-                        </div> */}
-                        <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
+                        </div>
+                        <div className={mintstyle} onClick={Mint}>mint now</div>
+                        {/* <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
                             <source src={gplock} type="video/mp4" />
-                        </video>
+                        </video> */}
                         <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
-                    {/* <div className="minted">
+                    <div className="minted">
                         <div className="total">Total minted: {nftsminted}/???? minted</div>
-                        <div className="user">You have minted: {walletMinted}</div>
-                    </div> */}
+                        {/* <div className="user">You have minted: {walletMinted}</div> */}
+                    </div>
                 </div>
 
             </div>
