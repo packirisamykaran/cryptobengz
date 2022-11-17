@@ -93,8 +93,9 @@ export default function Home() {
             setWalletMinted(minted.toNumber())
 
 
-            const curMintbatch = await contract.currentMintBatch();
 
+            const curMintbatch = await contract.currentMintBatch();
+            console.log(curMintbatch)
 
             setMintBatch(curMintbatch.toNumber());
 
@@ -123,6 +124,7 @@ export default function Home() {
             if (mintBatch === 1) {
                 if (whiteList.list.includes(userAddress)) {
                     mintTransaction = await contract.mintBatch1(quantity, { value: ethers.utils.parseEther((quantity * 0.03).toString()) })
+                    mintSuccess();
                 } else {
                     notWhiteListed()
                 }
@@ -130,17 +132,21 @@ export default function Home() {
             }
             else if (mintBatch === 2) {
                 mintTransaction = await contract.mintBatch2(quantity, { value: ethers.utils.parseEther(((quantity * 0.1) / 2).toString()) })
+                mintSuccess();
             }
 
             else if (mintBatch === 3) {
                 mintTransaction = await contract.mintBatch3(quantity, { value: ethers.utils.parseEther((quantity * 0.045).toString()) })
+                mintSuccess();
+            } else {
+                mintFailed();
             }
             // 4) transaction
 
-            mintSuccess();
 
-            const supply = await contract.totalSupply();
-            setNftsminted(supply.toNumber());
+
+            // const supply = await contract.totalSupply();
+            // setNftsminted(supply.toNumber());
             setWalletMinted(walletMinted + quantity);
             if (mintTransaction) {
                 playGP()
