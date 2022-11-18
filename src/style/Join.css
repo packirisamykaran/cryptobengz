@@ -7,7 +7,7 @@
 }
 
 .app {
-  background: #211232;
+  background: #201131;
   position: relative;
 }
 .app .logo {
@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-around;
   background: #372553;
-  padding: 0.5rem 20%;
+  padding: 0.7rem 20%;
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
@@ -34,8 +34,9 @@
   color: #A16FE9;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.5rem 0.2rem;
-  border-radius: 10px;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
 }
 .app .navbar a:hover {
   background-color: #A16FE9;
@@ -44,7 +45,7 @@
 .app .navbar .active {
   background: #FE1675;
   border-radius: 5px;
-  padding: 0.2rem 0.2rem;
+  padding: 0.2rem 0.4rem;
   color: #372553;
   text-transform: uppercase;
 }
@@ -55,7 +56,6 @@
   color: #FFE97C;
 }
 .app .navbar > * {
-  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
 }
@@ -112,7 +112,7 @@
   .app .navbar {
     padding: 0.5rem 0;
   }
-  .app .navbar > * {
+  .app .navbar a {
     font-size: 1rem;
   }
   .app .home .mintSection .bg {
@@ -129,7 +129,7 @@
   }
 }
 .join {
-  background-color: #211232;
+  background-color: #201131;
   color: #A16FE9;
   font-size: 1.2rem;
 }
