@@ -198,21 +198,27 @@ export default function Home() {
         if (mintBatch === 1) {
             if (nftmintable - (quantity * 2) >= 2) {
                 setquantity(quantity + 1);
-            } else {
-                maxQuantity();
             }
 
-            console.log(quantity)
+            // console.log(quantity)
         }
+        // else if (mintBatch === 2) {
+
+        // }
 
 
         // setquantity(quantity + 1);
     }
     function decrement() {
 
-        if (quantity > 0) {
-            setquantity(quantity - 1);
+        if (mintBatch === 1) {
+            if (quantity > 0) {
+                setquantity(quantity - 1);
+            }
         }
+        //  else if (mintBatch === 2) {
+
+        // }
     }
 
 
