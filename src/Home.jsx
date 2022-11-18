@@ -53,11 +53,15 @@ export default function Home() {
 
 
 
+
+
     // Toast notification
     const mintSuccess = () => toast.success("Minted successfully")
 
     const mintFailed = () => toast.error("Mint Failed")
     const notWhiteListed = () => toast.error("You are not guestlisted");
+
+    const maxQuantity = () => toast.error("Wallet has reached maximum limit, try another wallet")
 
 
     const batch2Error = () => toast.error("Mint in multiples of 2");
@@ -71,7 +75,6 @@ export default function Home() {
             const scAddress = "0x790F503Eb1C3F03D747B2C9321d759A81374876c";
             await provider.send("eth_requestAccounts", []);
 
-            console.log(provider)
 
             // // 2) signer
             const signer = provider.getSigner();
@@ -83,7 +86,7 @@ export default function Home() {
 
             // 3) contract object once connected
             const contract = new ethers.Contract(scAddress, abi, signer);
-
+            setContract(contract);
 
             const supply = await contract.totalSupply();
             setNftsminted(supply.toNumber());
@@ -93,14 +96,12 @@ export default function Home() {
             setWalletMinted(minted.toNumber())
 
 
+            const curMintbatch = await contract.currentMintBatch();
 
-            // const curMintbatch = await contract.currentMintBatch();
-            // console.log(curMintbatch)
-
-            // setMintBatch(curMintbatch.toNumber());
+            setMintBatch(curMintbatch);
 
 
-            setContract(contract);
+
         }
 
         try {
@@ -124,8 +125,11 @@ export default function Home() {
 
             if (mintBatch === 1) {
                 if (true) {
+                    // console.log("works")
                     mintTransaction = await contract.mintBatch1(quantity, { value: ethers.utils.parseEther((quantity * 0.03).toString()) })
                     mintSuccess();
+                    playGP()
+
                 } else {
                     notWhiteListed()
                 }
@@ -139,6 +143,7 @@ export default function Home() {
             else if (mintBatch === 3) {
                 mintTransaction = await contract.mintBatch3(quantity, { value: ethers.utils.parseEther((quantity * 0.045).toString()) })
                 mintSuccess();
+                playGP()
             } else {
                 mintFailed();
             }
@@ -148,10 +153,13 @@ export default function Home() {
 
             // const supply = await contract.totalSupply();
             // setNftsminted(supply.toNumber());
+
+            mintTransaction = true
+
             setWalletMinted(walletMinted + quantity);
-            if (mintTransaction) {
-                playGP()
-            }
+            // if (mintTransaction) {
+            //     playGP()
+            // }
 
 
 
@@ -184,7 +192,21 @@ export default function Home() {
 
 
     function increment() {
-        setquantity(quantity + 1);
+
+        const nftmintable = 20 - walletMinted;
+
+        if (mintBatch === 1) {
+            if (nftmintable - (quantity * 2) >= 2) {
+                setquantity(quantity + 1);
+            } else {
+                maxQuantity();
+            }
+
+            console.log(quantity)
+        }
+
+
+        // setquantity(quantity + 1);
     }
     function decrement() {
 
@@ -323,9 +345,9 @@ export default function Home() {
                     <div className="welcome">
                         Welcome to the Cryptobengz family, a place to call home.<br /> Stay Real, Stay Huat!
                     </div>
-                    <a href="">
+                    {/* <a href="">
                         View on OpenSea
-                    </a>
+                    </a> */}
                 </div>
                 <img src={scroll} alt="" className='bg' />
             </div>
@@ -358,9 +380,9 @@ export default function Home() {
                         <div className={collectstyle} >
                             <h3 onClick={onCollect}>Collect</h3>
 
-                            <div className="message">
+                            {/* <div className="message">
                                 Some Message, you have minted you th NFT
-                            </div>
+                            </div> */}
                         </div>
                         <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.1"} type="video/mp4" />
