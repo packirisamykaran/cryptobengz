@@ -102,6 +102,9 @@ export default function Home() {
 
 
 
+
+
+
         }
 
         try {
@@ -126,6 +129,7 @@ export default function Home() {
             if (mintBatch === 1) {
                 if (true) {
                     // console.log("works")
+                    // console.log(quantity)
                     mintTransaction = await contract.mintBatch1(quantity, { value: ethers.utils.parseEther((quantity * 0.03).toString()) })
                     mintSuccess();
                     playGP()
@@ -136,7 +140,7 @@ export default function Home() {
 
             }
             else if (mintBatch === 2) {
-                mintTransaction = await contract.mintBatch2(quantity, { value: ethers.utils.parseEther(((quantity * 0.1) / 2).toString()) })
+                mintTransaction = await contract.mintBatch2(quantity / 2, { value: ethers.utils.parseEther(((quantity * 0.1) / 4).toString()) })
                 mintSuccess();
             }
 
@@ -195,6 +199,7 @@ export default function Home() {
 
         const nftmintable = 20 - walletMinted;
 
+
         if (mintBatch === 1) {
             if (nftmintable - (quantity * 2) >= 2) {
                 setquantity(quantity + 1);
@@ -202,9 +207,13 @@ export default function Home() {
 
             // console.log(quantity)
         }
-        // else if (mintBatch === 2) {
 
-        // }
+
+        else if (mintBatch === 2) {
+            if (nftmintable - (quantity) >= 4) {
+                setquantity(quantity + 4);
+            }
+        }
 
 
         // setquantity(quantity + 1);
@@ -216,9 +225,12 @@ export default function Home() {
                 setquantity(quantity - 1);
             }
         }
-        //  else if (mintBatch === 2) {
+        if (mintBatch === 2) {
+            if (quantity > 0) {
+                setquantity(quantity - 4);
+            }
 
-        // }
+        }
     }
 
 
@@ -390,7 +402,7 @@ export default function Home() {
                                 Some Message, you have minted you th NFT
                             </div> */}
                         </div>
-                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
+                        {/* <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.1"} type="video/mp4" />
                         </video>
 
@@ -399,10 +411,10 @@ export default function Home() {
                             <div className="value">{quantity}</div>
                             <button onClick={increment}>+</button>
                         </div>
-                        <div className={mintstyle} onClick={Mint}>mint now</div>
-                        {/* <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
+                        <div className={mintstyle} onClick={Mint}>mint now</div> */}
+                        <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
                             <source src={gplock} type="video/mp4" />
-                        </video> */}
+                        </video>
                         <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
