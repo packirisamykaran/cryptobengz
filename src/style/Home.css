@@ -7,7 +7,7 @@
 }
 
 .app {
-  background: #211232;
+  background: #201131;
   position: relative;
 }
 .app .logo {
@@ -293,7 +293,7 @@
 .home .mintSection .hero .video .skip {
   display: block;
   background: #FFE97C;
-  color: #211232;
+  color: #201131;
   padding: 0.3rem 1rem;
   border-radius: 5px;
   width: -webkit-fit-content;
@@ -305,7 +305,7 @@
   display: block;
   text-transform: uppercase;
   background: #FE1675;
-  color: #211232;
+  color: #201131;
   padding: 0.3rem 1rem;
   border-radius: 100px;
   width: -webkit-fit-content;
@@ -552,7 +552,7 @@
   overflow: hidden;
 }
 .home .roadmap .bgclr {
-  background-color: #211232;
+  background-color: #201131;
   width: 100%;
   position: absolute;
   height: 100%;
