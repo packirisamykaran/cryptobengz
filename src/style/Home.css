@@ -7,7 +7,7 @@
 }
 
 .app {
-  background: #201131;
+  background: #211232;
   position: relative;
 }
 .app .logo {
@@ -248,6 +248,9 @@
   width: 60%;
   margin-top: 1rem;
 }
+.home .mintSection .hero .video .message {
+  font-size: 2rem;
+}
 .home .mintSection .hero .video .counter {
   display: flex;
   margin: 0 auto;
@@ -293,7 +296,7 @@
 .home .mintSection .hero .video .skip {
   display: block;
   background: #FFE97C;
-  color: #201131;
+  color: #211232;
   padding: 0.3rem 1rem;
   border-radius: 5px;
   width: -webkit-fit-content;
@@ -305,7 +308,7 @@
   display: block;
   text-transform: uppercase;
   background: #FE1675;
-  color: #201131;
+  color: #211232;
   padding: 0.3rem 1rem;
   border-radius: 100px;
   width: -webkit-fit-content;
@@ -366,7 +369,7 @@
   padding: 0.5rem;
   border: 2px solid #FE1675;
   border-radius: 10px;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .home .collection_LB {
   padding: 2rem 0;
@@ -552,7 +555,7 @@
   overflow: hidden;
 }
 .home .roadmap .bgclr {
-  background-color: #201131;
+  background-color: #211232;
   width: 100%;
   position: absolute;
   height: 100%;

@@ -417,19 +417,22 @@ export default function Home() {
                                 Some Message, you have minted you th NFT
                             </div> */}
                         </div>
-                        <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
+                        {/* <video id='gp' className='gp' onEnded={onVidEnd} autoPlay={false} controls={false} preload='auto' playsInline>
                             <source src={gp + "#t=0.1"} type="video/mp4" />
-                        </video>
+                        </video> */}
 
-                        <div className={counterStyle}>
+                        {/* <div className={counterStyle}>
                             <button onClick={decrement}>-</button>
                             <div className="value">{quantity}</div>
                             <button onClick={increment}>+</button>
-                        </div>
-                        <div className={mintstyle} onClick={Mint}>mint now</div>
-                        {/* <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
+                        </div> */}
+                        {/* <div className={mintstyle} onClick={Mint}>mint now</div> */}
+                        <video id='gp' className='gp' onEnded={onlockend} autoPlay={true} onClick={playlocked} controls={false} preload='auto' loop={false} playsInline>
                             <source src={gplock} type="video/mp4" />
-                        </video> */}
+                        </video>
+                        <div className="message">
+                            Thanks for playing!
+                        </div>
                         <div className={skipstyle} onClick={skiptoend}>SKIP ANIMATION</div>
 
                     </div>
