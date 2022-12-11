@@ -21,12 +21,15 @@ export default function Merchant() {
         "RECREATIONAL": {
             "URBAN TAVERN": "61 URBAN TAVERN.png",
             "SINGAPORE PUB CRAWL": "57 SG PUBCRAWL LOGO.png",
-            "RUGRUG.SG": "67 RUGRUG.SG LOGO.png"
+            "RUGRUG.SG": "67 RUGRUG.SG LOGO.png",
+            "THE EPICUREAN STATE": "The Epicurean State.png"
         },
         "RETAIL": {
             "HALOBE": "66 HALOBE LOGO.jpg",
             "PIT STOP": "65 PIT STOP LOGO.jpg",
-            "DREAMTINKER": "59 DREAMTINKER.png"
+            "DREAMTINKER": "59 DREAMTINKER.png",
+            "CREW SHOP": "crewshop.jpg",
+            "OSBIOME": "osbiome.jpg"
         },
         "OTHERS": {
             "ANIMAL RECOVERY VETERINARY CENTRE (ARVC)": "68 ARVC LOGO.jpg"
@@ -51,12 +54,15 @@ export default function Merchant() {
         "RECREATIONAL": {
             "URBAN TAVERN": "https://www.urbantavernsg.com/",
             "SINGAPORE PUB CRAWL": "https://www.sgpubcrawl.com/",
-            "RUGRUG.SG": "https://www.instagram.com/rugrug.sg/?igshid=YmMyMTA2M2Y%3D"
+            "RUGRUG.SG": "https://www.instagram.com/rugrug.sg/?igshid=YmMyMTA2M2Y%3D",
+            "THE EPICUREAN STATE": "https://yachtchartersingapore.com.sg/"
         },
         "RETAIL": {
             "HALOBE": "https://halobe.sg/",
             "PIT STOP": "",
-            "DREAMTINKER": ""
+            "DREAMTINKER": "",
+            "CREW SHOP": "https://www.crewshop.sg/pages/passwordvalidation?redirect=%2F",
+            "OSBIOME": "https://osbiome.com/"
         },
         "OTHERS": {
             "ANIMAL RECOVERY VETERINARY CENTRE (ARVC)": "https://sg.petspace.group/"
