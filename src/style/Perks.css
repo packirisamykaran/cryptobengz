@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Geo", sans-serif;
+}
+
+.app {
+  background: #211232;
+  position: relative;
+}
+.app .logo {
+  background-color: #FFE97C;
+}
+.app .logo img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.app .navbar {
+  display: flex;
+  justify-content: space-around;
+  background: #372553;
+  padding: 0.7rem 20%;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.app .navbar a {
+  color: #A16FE9;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.app .navbar a:hover {
+  background-color: #A16FE9;
+  color: #372553;
+}
+.app .navbar .active {
+  background: #FE1675;
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: #372553;
+  text-transform: uppercase;
+}
+.app .navbar .btn {
+  background-color: #A16FE9;
+  padding: 0.2rem 0.2rem;
+  border-radius: 5px;
+  color: #FFE97C;
+}
+.app .navbar > * {
+  font-weight: 500;
+  cursor: pointer;
+}
+.app .navbar > * :active {
+  scale: 0.8;
+}
+.app .footer {
+  background: #FFE97C;
+  padding: 4rem 0;
+}
+.app .footer .container {
+  width: 80%;
+  margin: 0 auto;
+}
+.app .footer .container .logoLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.app .footer .container .logoLinks .logo {
+  width: 150px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.app .footer .container .logoLinks .links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.app .footer .container .logoLinks .links > * {
+  color: #FE1675;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+.app .footer .container .logoLinks > * {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.app .footer .container .trademark {
+  color: #FE1675;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 3rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+@media (max-width: 700px) {
+  .app .navbar {
+    padding: 0.5rem 0;
+  }
+  .app .navbar a {
+    font-size: 1rem;
+  }
+  .app .home .mintSection .bg {
+    padding: 2rem 0;
+  }
+  .app .home .mintSection .bg .left,
+.app .home .mintSection .bg .right {
+    margin: -1rem 0;
+    width: 150px;
+  }
+  .app .footer .container .logoLinks {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+}
+.perks-page {
+  color: #FFE97C;
+  width: 90%;
+  margin: 2rem auto;
+  max-width: 700px;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  background: #211232;
+  border-radius: 20px;
+  align-items: center;
+}
+.perks-page .item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.perks-page .item .merchants {
+  width: 100px;
+  border-radius: 10px;
+}
+.perks-page .item .perk {
+  padding: 0 0.5rem;
+  color: #A16FE9;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .perks-page .item .merchants {
+    font-size: 1.5rem;
+  }
+  .perks-page .item .perk {
+    font-size: 1rem;
+  }
+}
