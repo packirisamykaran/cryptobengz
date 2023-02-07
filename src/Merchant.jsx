@@ -34,7 +34,8 @@ export default function Merchant() {
             "DREAMTINKER": "59 DREAMTINKER.png",
             "CREW SHOP": "crewshop.jpg",
             "OSBIOME": "osbiome.jpg",
-            "KULT": "KULT.jpg"
+            "KULT": "KULT.jpg",
+            "Pristine Aroma": "Pristine Aroma.jpg"
         },
         "OTHERS": {
             "ANIMAL RECOVERY VETERINARY CENTRE (ARVC)": "68 ARVC LOGO.jpg"
@@ -70,7 +71,8 @@ export default function Merchant() {
             "DREAMTINKER": "",
             "CREW SHOP": "https://www.crewshop.sg/pages/passwordvalidation?redirect=%2F",
             "OSBIOME": "https://osbiome.com/",
-            "KULT": "https://www.kult.online/"
+            "KULT": "https://www.kult.online/",
+            "Pristine Aroma": "PristineAroma.sg"
         },
         "OTHERS": {
             "ANIMAL RECOVERY VETERINARY CENTRE (ARVC)": "https://sg.petspace.group/"
