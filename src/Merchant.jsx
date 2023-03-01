@@ -17,7 +17,7 @@ export default function Merchant() {
             "GATHER THE MISFITS": "63 GATHER THE MISFITS LOGO.jpg",
             "MAN MAN LAI": "60 MANMANLAI.png",
             "WAN FEN CHEE CHEONG FUN": "64 WAN FEN CHEE CHEONG FUN LOGO.jpg",
-            "BAR BAR BLACK SHEEP": "69 BARBAR BLACK SHEEP LOGO.png",
+            // "BAR BAR BLACK SHEEP": "69 BARBAR BLACK SHEEP LOGO.png",
             "ANG MOH LIANG TEH": "ANG MOH LIANG TEH.jpg",
             "BESUTO": "BESUTO.jpg"
         },
@@ -55,7 +55,7 @@ export default function Merchant() {
             "GATHER THE MISFITS": "https://gatherthemisfits.com/",
             "MAN MAN LAI": "https://manmanlai-bistro-bar.business.site/?m=true",
             "WAN FEN CHEE CHEONG FUN": "https://www.instagram.com/wanfencheecheongfan/?hl=en",
-            "BAR BAR BLACK SHEEP": "https://www.bbbs.com.sg/",
+            // "BAR BAR BLACK SHEEP": "https://www.bbbs.com.sg/",
             "ANG MOH LIANG TEH": "https://amlt.sg/",
             "BESUTO": "https://instagram.com/besuto.sg?igshid=YmMyMTA2M2Y="
         },
