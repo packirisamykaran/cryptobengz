@@ -110,7 +110,7 @@ export default function Home() {
         }
 
         try {
-            getcontract();
+            // getcontract();
 
         } catch (error) {
 
