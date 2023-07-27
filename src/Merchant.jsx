@@ -11,8 +11,8 @@ export default function Merchant() {
             "MIRAGE": "55 MIRAGE LOGO.png",
             // "WEN MOON": "52 WEN MOON LOGO.png",
             "ICE BAR": "70 ICEBAR LOGO.jpg",
-            "BUZZED BAR": "58 BUZZED BAR LOGO.png",
-            "BENG WHO COOKS": "54 BENGWHOCOOKS LOGO.jpg",
+            // "BUZZED BAR": "58 BUZZED BAR LOGO.png",
+            // "BENG WHO COOKS": "54 BENGWHOCOOKS LOGO.jpg",
             // "WICKED GOOD": "62 WICKED GOOD.png",
             "GATHER THE MISFITS": "63 GATHER THE MISFITS LOGO.jpg",
             "MAN MAN LAI": "60 MANMANLAI.png",
@@ -22,7 +22,7 @@ export default function Merchant() {
             "BESUTO": "BESUTO.jpg"
         },
         "RECREATIONAL": {
-            "URBAN TAVERN": "61 URBAN TAVERN.png",
+            // "URBAN TAVERN": "61 URBAN TAVERN.png",
             "SINGAPORE PUB CRAWL": "57 SG PUBCRAWL LOGO.png",
             "RUGRUG.SG": "67 RUGRUG.SG LOGO.png",
             "THE EPICUREAN STATE": "The Epicurean State.png"
@@ -49,8 +49,8 @@ export default function Merchant() {
             "MIRAGE": "https://www.facebook.com/theparlourmirage/",
             // "WEN MOON": "https://www.facebook.com/wenmoonbar/",
             "ICE BAR": "https://www.icebar.sg/",
-            "BUZZED BAR": "https://buzzed-bar.com/homepage",
-            "BENG WHO COOKS": "https://www.instagram.com/bengwhocooks/?hl=en",
+            // "BUZZED BAR": "https://buzzed-bar.com/homepage",
+            // "BENG WHO COOKS": "https://www.instagram.com/bengwhocooks/?hl=en",
             // "WICKED GOOD": "https://www.wickedgood.sg/",
             "GATHER THE MISFITS": "https://gatherthemisfits.com/",
             "MAN MAN LAI": "https://manmanlai-bistro-bar.business.site/?m=true",
@@ -60,7 +60,7 @@ export default function Merchant() {
             "BESUTO": "https://instagram.com/besuto.sg?igshid=YmMyMTA2M2Y="
         },
         "RECREATIONAL": {
-            "URBAN TAVERN": "https://www.urbantavernsg.com/",
+            // "URBAN TAVERN": "https://www.urbantavernsg.com/",
             "SINGAPORE PUB CRAWL": "https://www.sgpubcrawl.com/",
             "RUGRUG.SG": "https://www.instagram.com/rugrug.sg/?igshid=YmMyMTA2M2Y%3D",
             "THE EPICUREAN STATE": "https://yachtchartersingapore.com.sg/"
