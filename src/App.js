@@ -10,31 +10,26 @@ import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
 
 function App() {
-    // basename="/cbv2"
-    // "homepage": "https://packirisamykaran.github.io/cbv2",
+  function getLibrary(provider) {
+    return new Web3(provider);
+  }
 
-    // const web3react = useWeb3React();
-
-    function getLibrary(provider) {
-        return new Web3(provider);
-    }
-
-    return (
-        <Web3ReactProvider getLibrary={getLibrary}>
-            <BrowserRouter>
-                <ScrollToTop />
-                <div className="app">
-                    <Header />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/join" element={<Join />} />
-                        <Route path="/merchant" element={<Merchant />} />
-                    </Routes>
-                    <Footer />
-                </div>
-            </BrowserRouter>
-        </Web3ReactProvider>
-    );
+  return (
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <div className="app">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/join" element={<Join />} />
+            <Route path="/merchant" element={<Merchant />} />
+          </Routes>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Web3ReactProvider>
+  );
 }
 
 export default App;
